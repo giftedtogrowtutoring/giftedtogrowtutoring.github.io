@@ -24,6 +24,10 @@ Thumbs.db
 testimonials.txt
 Gifted to Grow Summary.txt
 image0.png
+Jen_profile_pics/
+
+# Unused asset variants (kept locally for reference)
+public/assets/bee-mascot-idle_V3.png
 
 # Claude Code local state
 .claude/

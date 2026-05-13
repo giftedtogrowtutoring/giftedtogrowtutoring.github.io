@@ -99,6 +99,12 @@
   --dur:         220ms;
   --dur-slow:    420ms;
   --breathe-dur: 4s;
+
+  /* Z-INDEX scale */
+  --z-sticky:  100;   /* nav-on-scroll, sticky elements */
+  --z-skip:    1000;  /* accessibility skip link (must stay above widget) */
+  --z-widget:  9000;  /* Buzz launcher (idle + collapsed) */
+  --z-overlay: 9500;  /* Buzz chat panel when open */
 }
 
 /* ===========================================================

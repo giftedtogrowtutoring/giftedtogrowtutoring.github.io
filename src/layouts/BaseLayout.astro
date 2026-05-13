@@ -3,6 +3,7 @@ import "../styles/tokens.css";
 import "../styles/site.css";
 import Nav from "../components/Nav.astro";
 import Footer from "../components/Footer.astro";
+import BuzzWidget from "../components/BuzzWidget.astro";
 import { business } from "../data/business.ts";
 
 interface Props {
@@ -80,5 +81,6 @@ const localBusinessSchema = {
       <slot />
     </main>
     <Footer />
+    <BuzzWidget />
   </body>
 </html>

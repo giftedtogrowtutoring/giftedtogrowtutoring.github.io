@@ -1,0 +1,18 @@
+---
+import BuzzLauncher from "./BuzzLauncher.astro";
+import BuzzChat from "./BuzzChat.astro";
+---
+<BuzzLauncher />
+<BuzzChat />
+
+<script>
+  import { initBuzz } from "../scripts/buzz.ts";
+
+  const start = (): void => initBuzz();
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", start, { once: true });
+  } else {
+    start();
+  }
+</script>
