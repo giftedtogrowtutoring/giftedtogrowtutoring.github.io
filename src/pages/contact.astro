@@ -7,9 +7,7 @@ import { business } from "../data/business.ts";
 const title = "Contact Jennifer — Send a Note | Gifted to Grow Tutoring";
 const description = "Tell Jennifer about your child. The first 15-minute call is free. She'll write back within one business day.";
 
-// Web3Forms — Jennifer will need to register at https://web3forms.com and put the access key here.
-// Until she does, the form will fail gracefully and show a polite error.
-const WEB3FORMS_ACCESS_KEY = "{{ NEEDS REVIEW: Web3Forms access key }}";
+const WEB3FORMS_ACCESS_KEY = "040e27de-957a-4362-9f43-a0dcc796dec9";
 ---
 <BaseLayout title={title} description={description}>
   <section class="section-cream" style="padding-top:64px;">
@@ -130,7 +128,6 @@ const WEB3FORMS_ACCESS_KEY = "{{ NEEDS REVIEW: Web3Forms access key }}";
               Jennifer will respond within one business day.
             </p>
           </form>
-          <p id="contactStatus" role="status" aria-live="polite" style="margin-top:12px;font-size:14px;color:var(--orange-deep);"></p>
         </div>
       </div>
     </div>
@@ -146,19 +143,4 @@ const WEB3FORMS_ACCESS_KEY = "{{ NEEDS REVIEW: Web3Forms access key }}";
     </div>
   </section>
 
-  <script is:inline>
-    // Progressive enhancement: intercept submission if access_key isn't configured.
-    const form = document.getElementById("contactForm");
-    const status = document.getElementById("contactStatus");
-    if (form && status) {
-      const access = form.querySelector('input[name="access_key"]');
-      if (access && access.value.includes("NEEDS REVIEW")) {
-        form.addEventListener("submit", (e) => {
-          e.preventDefault();
-          status.textContent =
-            "This form isn't fully wired up yet — please email jennifer@giftedtogrowtutoring.com or call (941) 586-8421.";
-        });
-      }
-    }
-  </script>
 </BaseLayout>
