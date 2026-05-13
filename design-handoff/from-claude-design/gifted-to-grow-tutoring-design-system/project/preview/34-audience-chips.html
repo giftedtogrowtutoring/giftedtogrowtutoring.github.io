@@ -1,0 +1,40 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>Audience-path chips</title><link rel="stylesheet" href="_base.css">
+<style>
+  .chips { display: flex; gap: 12px; }
+  .chip {
+    flex: 1; display: flex; flex-direction: column; gap: 4px;
+    background: var(--cream); border: 2px solid var(--border-soft); border-radius: 16px;
+    padding: 14px 16px; cursor: pointer; position: relative; overflow: hidden;
+    transition: all 220ms cubic-bezier(0.32,0.72,0.32,1);
+  }
+  .chip:hover { transform: translateY(-2px); box-shadow: var(--shadow); }
+  .chip .stripe { position: absolute; left: 0; top: 0; bottom: 0; width: 6px; }
+  .chip .t { font-family: var(--font-display); font-weight: 700; color: var(--plum); font-size: 16px; }
+  .chip .s { font-family: var(--font-body); font-size: 12px; color: var(--ink-soft); }
+  .chip.active { border-color: var(--plum); box-shadow: var(--shadow); }
+  .a .stripe { background: var(--lemon); }
+  .b .stripe { background: var(--orange); }
+  .c .stripe { background: var(--green); }
+  .lbl { font-family: ui-monospace, monospace; font-size: 11px; color: var(--ink-soft); margin-top: 12px; }
+</style></head>
+<body><div class="card-frame">
+  <div class="chips">
+    <div class="chip a active">
+      <span class="stripe"></span>
+      <span class="t">Worried about reading</span>
+      <span class="s">My child is falling behind</span>
+    </div>
+    <div class="chip b">
+      <span class="stripe"></span>
+      <span class="t">We homeschool</span>
+      <span class="s">Supplement my curriculum</span>
+    </div>
+    <div class="chip c">
+      <span class="stripe"></span>
+      <span class="t">Faith matters to us</span>
+      <span class="s">A teacher with shared values</span>
+    </div>
+  </div>
+  <div class="lbl">Three audience paths · 6px left stripe in --path-* color · "active" state gets plum border</div>
+</div></body></html>

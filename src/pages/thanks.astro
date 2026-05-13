@@ -1,0 +1,31 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Character from "../components/Character.astro";
+import Deco from "../components/Deco.astro";
+
+const title = "Note received — Thank you | Gifted to Grow Tutoring";
+const description = "Thank you for writing in. Jennifer will read your note and respond within one business day.";
+---
+<BaseLayout title={title} description={description}>
+  <section class="section-cream" style="padding:96px 0;">
+    <Deco name="sparkle" class="scatter" style="top:36px;left:10%;width:36px;" />
+    <Deco name="sparkle" class="scatter" style="top:80px;right:12%;width:28px;" />
+
+    <div class="shell" style="text-align:center;max-width:640px;">
+      <Character kind="lemon" size={140} />
+      <div class="eyebrow-row" style="justify-content:center;margin-top:24px;">
+        <span class="dot"></span>
+        <span class="eyebrow">Got your note</span>
+      </div>
+      <h1 class="display" style="margin-top:8px;">Thank you. I have your note.</h1>
+      <p class="lead">
+        I'll read it carefully and write back within one business day.
+        If you're in a hurry, you can also reach me at <a href="tel:+19415868421">(941) 586-8421</a>.
+      </p>
+      <p class="hand hand--green" style="font-size:1.75rem;margin-top:24px;">— Jennifer</p>
+      <p style="margin-top:32px;">
+        <a class="btn btn-ghost" href="/">Back to the home page</a>
+      </p>
+    </div>
+  </section>
+</BaseLayout>

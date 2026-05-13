@@ -1,0 +1,84 @@
+---
+import "../styles/tokens.css";
+import "../styles/site.css";
+import Nav from "../components/Nav.astro";
+import Footer from "../components/Footer.astro";
+import { business } from "../data/business.ts";
+
+interface Props {
+  title: string;
+  description: string;
+  /** Optional path-style OG image; falls back to logo. */
+  ogImage?: string;
+}
+
+const { title, description, ogImage = "/assets/logo-full.png" } = Astro.props;
+const canonical = new URL(Astro.url.pathname, Astro.site ?? business.url).toString();
+
+const localBusinessSchema = {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "@id": `${business.url}/#business`,
+  name: business.name,
+  image: `${business.url}${ogImage}`,
+  url: business.url,
+  telephone: business.phoneDisplay,
+  email: business.email,
+  address: {
+    "@type": "PostalAddress",
+    addressLocality: business.city,
+    addressRegion: business.region,
+    addressCountry: business.country,
+  },
+  areaServed: [
+    { "@type": "City", name: "Sarasota" },
+    { "@type": "City", name: "Bradenton" },
+  ],
+  founder: {
+    "@type": "Person",
+    name: business.owner,
+    jobTitle: "Tutor / Certified Educator",
+  },
+  description,
+};
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={new URL(ogImage, Astro.site ?? business.url).toString()} />
+    <meta property="og:site_name" content={business.name} />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={new URL(ogImage, Astro.site ?? business.url).toString()} />
+
+    <!-- Favicon (placeholder uses logo png; replace with a proper favicon set) -->
+    <link rel="icon" href="/assets/character-lemon.svg" type="image/svg+xml" />
+
+    <!-- LocalBusiness schema -->
+    <script type="application/ld+json" set:html={JSON.stringify(localBusinessSchema)} />
+
+    <meta name="theme-color" content="#FFF8EC" />
+  </head>
+  <body>
+    <a href="#main" class="skip-link">Skip to content</a>
+    <Nav />
+    <main id="main">
+      <slot />
+    </main>
+    <Footer />
+  </body>
+</html>

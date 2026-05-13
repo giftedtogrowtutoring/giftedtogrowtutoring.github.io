@@ -1,0 +1,36 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>Audience path colors</title><link rel="stylesheet" href="_base.css">
+<style>
+  .path {
+    flex: 1; border-radius: 16px; padding: 20px 22px;
+    border: 1.5px solid var(--border-soft); background: var(--cream);
+    display: flex; flex-direction: column; gap: 10px;
+    box-shadow: var(--shadow-sm);
+  }
+  .stripe { height: 8px; border-radius: 4px; }
+  .path .h { font-family: var(--font-display); font-weight:700; color: var(--plum); font-size: 17px; line-height: 1.15; }
+  .path .s { color: var(--ink-soft); font-size: 13px; line-height: 1.4; }
+  .path .v { font-family: ui-monospace, monospace; font-size: 11px; color: var(--ink-soft); }
+</style></head>
+<body><div class="card-frame">
+  <div class="row" style="align-items:stretch;gap:14px;">
+    <div class="path">
+      <div class="stripe" style="background:#F9D548"></div>
+      <div class="h">Anxious parents</div>
+      <div class="s">Struggling-student journey</div>
+      <div class="v">--path-anxious · #F9D548</div>
+    </div>
+    <div class="path">
+      <div class="stripe" style="background:#F08D3C"></div>
+      <div class="h">Homeschool families</div>
+      <div class="s">Supplementing at-home learning</div>
+      <div class="v">--path-homeschool · #F08D3C</div>
+    </div>
+    <div class="path">
+      <div class="stripe" style="background:#5B8C3E"></div>
+      <div class="h">Faith-aligned families</div>
+      <div class="s">A teacher who shares your values</div>
+      <div class="v">--path-faith · #5B8C3E</div>
+    </div>
+  </div>
+</div></body></html>

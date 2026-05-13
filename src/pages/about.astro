@@ -1,0 +1,120 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Deco from "../components/Deco.astro";
+import Character from "../components/Character.astro";
+import JoinTheGarden from "../components/JoinTheGarden.astro";
+
+const title = "About Jennifer Pollard — 25 Years in K-6 Classrooms | Gifted to Grow Tutoring";
+const description = "Jennifer Pollard is a Florida-certified PreK-6 educator with 25 years of experience, Reading Endorsed and ESOL Endorsed. Meet the teacher behind Gifted to Grow.";
+---
+<BaseLayout title={title} description={description}>
+  <section class="section-cream" style="padding-top:64px;">
+    <Deco name="leaf" class="scatter" style="top:24px;right:6%;width:80px;transform:rotate(18deg);" />
+    <Deco name="seed" class="scatter" style="bottom:24px;left:8%;width:32px;opacity:0.7;" />
+
+    <div class="shell">
+      <div class="eyebrow-row">
+        <span class="dot"></span>
+        <span class="eyebrow">About Jennifer</span>
+      </div>
+      <h1 class="display" style="max-width:14ch;">One teacher. Twenty-five years. Your child.</h1>
+      <p class="lead" style="max-width:36em;">
+        I'm Jennifer Pollard — a Florida-certified educator who has spent the last quarter-century
+        learning what makes K–6 readers, writers, and mathematicians thrive.
+        After much prayer and reflection, I'm taking a leave of absence from full-time teaching
+        to pour even more of my heart into tutoring families like yours.
+      </p>
+    </div>
+  </section>
+
+  <section class="section-cream" style="padding-top:24px;">
+    <div class="shell">
+      <div class="two-col">
+        <div class="photo-ph" data-placeholder>
+          <Deco name="sparkle" style="position:absolute;top:16px;right:16px;width:36px;" />
+          <div style="text-align:center;padding:24px;">
+            <Character kind="orange" size={100} />
+            <div class="hand" style="color:var(--plum);opacity:0.65;margin-top:12px;font-size:1.5rem;">
+              Photo of Jennifer<br/>at her desk
+            </div>
+            <div class="needs-review" style="margin-top:14px;">NEEDS REVIEW: real photo</div>
+          </div>
+        </div>
+
+        <div>
+          <h2>My story.</h2>
+          <p>
+            I started teaching in a Florida public-school classroom the year before some of my current
+            students' parents were even born. Across twenty-five years, I taught nearly every elementary
+            grade — kindergarteners learning to hold a pencil, fifth-graders piecing together their first
+            real essays, and everyone in between.
+          </p>
+          <p>
+            Along the way, I earned my Reading Endorsement and ESOL Endorsement, worked with children
+            on IEPs and 504 plans, and supported families through the Florida Step Up for Students program.
+            The thing that hasn't changed: a deep belief that every child can grow when the teaching
+            meets them where they are.
+          </p>
+          <p class="hand hand--green" style="margin-top:16px;">
+            "I keep my caseload small on purpose. I want to know your child."
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-lavender">
+    <div class="shell">
+      <div class="section-head">
+        <div class="eyebrow-row">
+          <span class="dot"></span>
+          <span class="eyebrow">Credentials</span>
+        </div>
+        <h2>Trained, endorsed, still learning.</h2>
+      </div>
+      <div class="credentials" style="gap:10px;">
+        <span class="badge">Florida-Certified PreK–6</span>
+        <span class="badge">Reading Endorsed</span>
+        <span class="badge">ESOL Endorsed</span>
+        <span class="badge">FL Step Up for Students Provider</span>
+        <span class="badge">25 years classroom experience</span>
+        <span class="badge">Experienced with IEPs &amp; 504s</span>
+      </div>
+      <p class="lead" style="margin-top:32px;max-width:36em;">
+        Endorsements aren't the whole story — but they do mean that what we'll do together is grounded in
+        research about how children actually learn to read, write, and reason.
+      </p>
+    </div>
+  </section>
+
+  <section class="section-cream">
+    <Deco name="sprout" class="scatter" style="top:32px;left:6%;width:60px;" />
+    <div class="shell">
+      <div class="two-col">
+        <div>
+          <div class="eyebrow-row">
+            <span class="dot"></span>
+            <span class="eyebrow">Faith, woven in</span>
+          </div>
+          <h2>It shows up as patience.</h2>
+          <p>
+            My faith is part of who I am. It's the steadiness on slow days, the belief that each child
+            is wonderfully made, the quiet confidence that growth — even tiny growth — is worth celebrating.
+          </p>
+          <p>
+            It is never a litmus test. Families of every background are warmly welcome here.
+            What your child gets from our sessions is the same either way.
+          </p>
+        </div>
+        <div class="card card--lavender">
+          <p class="hand hand--green" style="font-size:1.5rem;">Ephesians 3:20</p>
+          <p style="font-family:var(--font-display);font-weight:600;color:var(--plum);font-size:1.5rem;line-height:1.3;">
+            "Now to him who is able to do immeasurably more than all we ask or imagine&hellip;"
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <JoinTheGarden />
+</BaseLayout>

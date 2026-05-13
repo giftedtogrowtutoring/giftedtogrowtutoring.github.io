@@ -1,0 +1,50 @@
+---
+import Deco from "./Deco.astro";
+import Character from "./Character.astro";
+---
+<section id="about" class="section-cream" style="padding-top:32px;">
+  <div class="shell">
+    <div class="two-col">
+      <div class="photo-ph" data-placeholder>
+        <Deco name="sparkle" style="position:absolute;top:16px;right:16px;width:36px;" />
+        <div style="text-align:center;padding:24px;">
+          <Character kind="lemon" size={88} />
+          <div class="hand" style="color:var(--plum);opacity:0.65;margin-top:12px;font-size:1.5rem;">
+            Photo of Jennifer<br/>goes here
+          </div>
+          <div class="needs-review" style="margin-top:14px;">NEEDS REVIEW: real photo</div>
+        </div>
+      </div>
+
+      <div>
+        <div class="eyebrow-row">
+          <span class="dot"></span>
+          <span class="eyebrow">About Jennifer</span>
+        </div>
+        <h2 class="h1">One teacher, every session.</h2>
+        <p class="lead" style="margin-top:12px;">
+          When you write to Gifted to Grow, you reach me — not a desk, not a coordinator.
+          I read every note myself, and I'll write back the same day.
+        </p>
+        <p style="margin-top:12px;">
+          I taught for twenty-five years in Florida public and private K–6 classrooms before
+          opening this tutoring practice. I keep my caseload small on purpose so I can know
+          each of your children well.
+        </p>
+        <div class="credentials">
+          <span class="badge">Certified PreK–6</span>
+          <span class="badge">Reading Endorsed</span>
+          <span class="badge">ESOL Endorsed</span>
+          <span class="badge">FL Step Up Provider</span>
+          <span class="badge">25 years experience</span>
+        </div>
+        <p class="hand hand--green" style="margin-top:24px;">
+          "This is my favorite part of the week."
+        </p>
+        <p style="margin-top:18px;">
+          <a href="/about/" class="btn btn-ghost">Read more about Jennifer</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>

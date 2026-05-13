@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 100" width="80" height="100" role="img" aria-label="Sprout">
+  <path d="M40 96 L 40 50" stroke="#5B8C3E" stroke-width="3.5" stroke-linecap="round" fill="none"></path>
+  <path d="M40 60 C 26 56 18 42 22 30 C 36 32 44 46 40 60 Z" fill="#7BB155" stroke="#3D1E6D" stroke-width="2.5" stroke-linejoin="round"></path>
+  <path d="M40 52 C 54 48 64 32 60 18 C 46 22 38 38 40 52 Z" fill="#5B8C3E" stroke="#3D1E6D" stroke-width="2.5" stroke-linejoin="round"></path>
+  <path d="M30 38 q 5 4 10 8" stroke="#3D1E6D" stroke-width="1.6" fill="none" opacity="0.55"></path>
+  <path d="M50 30 q -5 6 -10 12" stroke="#3D1E6D" stroke-width="1.6" fill="none" opacity="0.55"></path>
+</svg>

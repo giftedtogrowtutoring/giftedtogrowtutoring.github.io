@@ -1,0 +1,23 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>Characters</title><link rel="stylesheet" href="_base.css">
+<style>
+  .row { gap: 28px; justify-content: center; padding: 8px 0 0; }
+  @keyframes breathe { 0%,100%{transform:scale(1);} 50%{transform:scale(1.02);} }
+  .breathe { animation: breathe 4s ease-in-out infinite; transform-origin: center; }
+  .breathe-off { animation-delay: 1.2s; }
+  .lbl { font-family: ui-monospace, monospace; font-size: 11px; color: var(--ink-soft); text-align: center; margin-top: 4px; }
+  .lbl b { display: block; font-family: var(--font-body); color: var(--plum); font-size: 13px; }
+  .demo { display: flex; flex-direction: column; align-items: center; gap: 6px; }
+</style></head>
+<body><div class="card-frame">
+  <div class="row">
+    <div class="demo">
+      <img class="breathe" src="../assets/character-lemon.svg" width="120" height="140">
+      <div class="lbl"><b>Lemon</b>hero · anxious-parent path</div>
+    </div>
+    <div class="demo">
+      <img class="breathe breathe-off" src="../assets/character-orange.svg" width="120" height="140">
+      <div class="lbl"><b>Orange</b>contact · homeschool path</div>
+    </div>
+  </div>
+</div></body></html>

@@ -1,0 +1,192 @@
+# CLAUDE.md — Gifted to Grow Tutoring Website
+
+This file is your project brief. Read it every time you start work in this repo.
+
+---
+
+## 0. Workflow Context (How This Project Is Being Built)
+
+This site is being built across two Anthropic tools, in sequence:
+
+1. **Claude Design** (claude.ai/design) — used for visual exploration, hero prototypes, and design system definition. Outputs from there (exported HTML, screenshots, or design system specs) live in `/design-handoff/` in this repo.
+2. **Claude Code (desktop app, Code tab)** — used to build the production Astro site against the design system and Claude Design outputs. This is where YOU (Claude) are working.
+
+You are NOT working in a CLI or VS Code extension. You are running inside the Claude desktop app's Code tab. The user has an integrated terminal and file editor available alongside you.
+
+---
+
+## 1. The Project
+
+You are helping build the website for **Gifted to Grow Tutoring**, owned by Jennifer Pollard, a Florida-certified educator with 25 years of experience. She is taking a leave of absence from full-time teaching to grow her tutoring practice.
+
+**Location:** Sarasota / Bradenton, Florida
+**Audience:** Parents of K-6 students in Florida (with planned expansion to middle/high school)
+**Primary CTA:** Fill out the contact/intake form
+**Domain:** giftedtogrowtutoring.com
+
+---
+
+## 2. Tech Stack
+
+- **Framework:** Astro (static site generator, zero JS by default)
+- **Styling:** Plain CSS with CSS custom properties (no Tailwind — handcrafted feel matches the brand)
+- **Forms:** Web3Forms or Formspree (no backend, free tier sufficient for expected volume)
+- **Hosting:** GitHub Pages (free, integrates with the existing GitHub workflow)
+- **Image optimization:** Astro's built-in `<Image>` component
+- **Fonts:** Google Fonts (Fraunces, Nunito, Caveat) — loaded with `display=swap`
+- **Analytics:** Plausible (privacy-first) or GA4 — confirm with user before adding
+
+**Do NOT add:**
+- React, Vue, Svelte (unnecessary complexity)
+- A CMS (Markdown content is sufficient)
+- Tailwind (clashes with the handcrafted aesthetic goal)
+- A database
+- jQuery or any legacy JS
+
+---
+
+## 3. Aesthetic Direction (READ THIS BEFORE WRITING ANY CSS)
+
+**The goal:** A handcrafted children's book come to life as a website. Warm, joyful, faith-rooted, unmistakably *not* generic.
+
+See `DESIGN_SYSTEM.md` for the full system. The high-level commitments:
+
+- **Color:** Deep Plum (#3D1E6D) primary, Cream (#FFF8EC) background, Lemon Yellow / Orange / Garden Green / Soft Lavender accents
+- **Type:** Sansita Swashed (display headlines, weights 700/900) + Nunito (body, weights 400/600/700) + Caveat (handwritten accents only, sparingly)
+- **Garden metaphor** for section names: Plant the Seed / Tend the Roots / Bear Fruit / Join the Garden
+- **No blue. No pure white. No Inter. No generic stock photos.**
+
+---
+
+## 4. Voice & Content Rules
+
+Jennifer's voice is **warm, calm, knowledgeable, faith-rooted without being preachy.** When writing or editing copy:
+
+- ✅ Use "your child" — not "students" or "kids" generically
+- ✅ Use "we" when referring to the tutoring relationship — emphasizes partnership
+- ✅ Reference her 25 years of experience, but never lead with credentials
+- ✅ Acknowledge parents' worry without amplifying it
+- ✅ Faith is present but invitational, never gate-keeping ("families of all backgrounds welcome")
+- ❌ Never use educational jargon without explanation ("SLD," "differentiated instruction" — explain or replace)
+- ❌ Never make growth guarantees ("from a 1 to a 5") — she explicitly cannot promise this
+- ❌ Never write like a marketer ("Unlock your child's potential!")
+
+When in doubt, write like a kind, brilliant teacher chatting with a parent at pickup.
+
+---
+
+## 5. Site Structure (Sitemap)
+
+```
+/                    Home (the showpiece — most visitors land here)
+/about               About Jennifer (her story, credentials, faith)
+/services            Services & pricing (1:1, small group, homeschool support, Step Up)
+/approach            Her teaching philosophy (gifts-first, executive function, etc.)
+/testimonials        Full testimonials page (scales as more come in)
+/contact             Contact / intake form (primary CTA destination)
+/blog                (Future) — leave folder structure in place
+```
+
+Footer should appear on every page with: contact info, FL Step Up Provider badge, navigation, copyright.
+
+---
+
+## 6. Critical Facts About Jennifer (use accurately, don't invent)
+
+- 25 years teaching experience
+- Florida-certified PreK-6
+- Reading Endorsed, ESOL Endorsed
+- FL Step Up for Students Provider (this is important for SEO and trust)
+- Phone: (941) 586-8421
+- Email: jennifer@giftedtogrowtutoring.com
+- Serves grades K-6 (mentioned PreK-6 in some materials, K-8 in others — default to K-6 to match her current logo; mention expansion plans separately)
+- Available hours: After-school 3-7pm Mon-Thu; Daytime Mon/Tue/Thu
+- Works with students who have IEPs and 504 plans
+- Tutoring locations: in-home, library, online
+
+**Two real testimonials are on file** (Beatriz Tremols re: Penelope & Lucas; Theresa Giuliani re: her daughter). More are expected. Design the testimonial component to scale.
+
+---
+
+## 7. Pricing
+
+Show ranges, not exact rates. Suggested structure:
+
+- 1:1 Private Tutoring — $60–$75/session
+- 2:1 Semi-Private — $45–$55/student/session
+- Small Group (3-4 students) — $35–$45/student/session
+- Homeschool Partnership — Inquire
+- FL Step Up Scholarship — Accepted, no out-of-pocket for qualifying families
+
+**Always include:** "Free 15-minute consultation call to find the right fit."
+
+⚠️ Confirm exact ranges with Jennifer before publishing.
+
+---
+
+## 8. SEO Priorities
+
+Primary target keywords:
+- "Sarasota tutor" / "Bradenton tutor"
+- "Reading tutor Sarasota"
+- "Math tutor Bradenton"
+- "Christian tutor Sarasota" (lower volume, higher intent)
+- "Homeschool help Sarasota"
+- "FL Step Up tutor"
+- "FSA test prep Sarasota" (Florida state assessment)
+
+Every page needs:
+- Unique `<title>` tag (under 60 chars)
+- Unique meta description (under 155 chars)
+- One H1, hierarchical heading structure below
+- LocalBusiness schema markup in the layout (address, phone, hours)
+- Open Graph tags for social sharing
+
+Build an XML sitemap and robots.txt. Submit to Google Search Console once live.
+
+---
+
+## 9. The Contact Form (Primary Conversion Point)
+
+This form is the #1 priority. Get it right.
+
+**Fields (in this order):**
+1. Parent's name (required)
+2. Email (required)
+3. Phone (optional, with note: "if you prefer a call back")
+4. Child's grade level (dropdown: K, 1, 2, 3, 4, 5, 6, Other)
+5. What you're looking for help with (checkboxes: Reading, Writing, Math, Test Prep, Homeschool Support, Executive Function, Not sure yet)
+6. Anything Jennifer should know (textarea — 4 rows, optional)
+7. How did you hear about us? (optional dropdown)
+
+**Submit button text:** "Send Jennifer a Note" (not "Submit")
+**After submission:** Friendly thank-you page with what to expect next ("Jennifer will respond within 1 business day").
+
+---
+
+## 10. Accessibility (Non-Negotiable)
+
+- WCAG 2.1 AA compliance minimum
+- Test with keyboard-only navigation before any commit
+- All images need meaningful alt text (decorative-only get `alt=""`)
+- Focus states visible (3px Lemon Yellow outline)
+- Honor `prefers-reduced-motion`
+- Use semantic HTML (no `<div>` soup)
+
+---
+
+## 11. Workflow Rules
+
+- **Plan before you build.** For any new page or major component, describe the structure first, get approval, then code.
+- **One thing at a time.** Don't refactor while adding features.
+- **Test mobile first.** This is a tutoring site — parents will visit on phones during school pickup.
+- **Commit often** with clear messages. Format: `feat:`, `fix:`, `style:`, `docs:`, `refactor:`.
+- **Never modify `DESIGN_SYSTEM.md` or this file** without asking the user first.
+
+---
+
+## 12. When You're Stuck
+
+- If a design choice isn't in the design system, propose two options to the user with tradeoffs.
+- If content is missing, mark it clearly with `{{ NEEDS REVIEW: ... }}` rather than inventing.
+- If you're not sure something is true about Jennifer or her business, ASK. Don't fabricate credentials, results, or testimonials.

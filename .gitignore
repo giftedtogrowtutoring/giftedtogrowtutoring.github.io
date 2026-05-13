@@ -1,0 +1,29 @@
+# Astro
+dist/
+.astro/
+
+# Dependencies
+node_modules/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Environment
+.env
+.env.local
+.env.production
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Local source materials — not for the public repo
+testimonials.txt
+Gifted to Grow Summary.txt
+image0.png
+
+# Claude Code local state
+.claude/

@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" width="80" height="80" role="img" aria-label="Pencil">
+  <g transform="rotate(-22 40 40)">
+    <rect x="22" y="14" width="36" height="12" fill="#F9D548" stroke="#3D1E6D" stroke-width="2.5"></rect>
+    <rect x="22" y="14" width="6" height="12" fill="#F08D3C" stroke="#3D1E6D" stroke-width="2.5"></rect>
+    <rect x="22" y="26" width="36" height="34" fill="#FFF8EC" stroke="#3D1E6D" stroke-width="2.5"></rect>
+    <path d="M22 60 L 40 74 L 58 60 Z" fill="#FBEFD4" stroke="#3D1E6D" stroke-width="2.5" stroke-linejoin="round"></path>
+    <path d="M30 70 L 40 74 L 50 70 Z" fill="#1A0F33"></path>
+  </g>
+</svg>

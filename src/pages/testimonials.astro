@@ -1,0 +1,49 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Deco from "../components/Deco.astro";
+import JoinTheGarden from "../components/JoinTheGarden.astro";
+import { testimonials } from "../data/testimonials.ts";
+
+const title = "What Parents Say — Testimonials | Gifted to Grow Tutoring";
+const description = "Real testimonials from families Jennifer has tutored. Quiet, steady progress that lasts long after our sessions end.";
+---
+<BaseLayout title={title} description={description}>
+  <section class="section-cream" style="padding-top:64px;">
+    <Deco name="heart" class="scatter" style="top:24px;left:8%;width:48px;transform:rotate(-12deg);" />
+    <Deco name="sun"   class="scatter" style="top:32px;right:8%;width:60px;" />
+    <div class="shell">
+      <div class="eyebrow-row">
+        <span class="dot"></span>
+        <span class="eyebrow">Bear Fruit</span>
+      </div>
+      <h1 class="display" style="max-width:18ch;">Quiet, steady progress — in their own words.</h1>
+      <p class="lead" style="max-width:36em;">
+        These are real notes from real families. I asked permission before sharing each one.
+        If you've worked with me and would like to add yours, just write me a note.
+      </p>
+    </div>
+  </section>
+
+  <section class="section-lavender">
+    <div class="shell">
+      <div class="quotes">
+        {testimonials.map((q) => (
+          <article class="quote">
+            <span class="mark" aria-hidden="true">&ldquo;</span>
+            <p class="body">{q.full ?? q.body}</p>
+            <div>
+              <div class="sig">{q.sig}</div>
+              <div class="meta">{q.meta}</div>
+            </div>
+          </article>
+        ))}
+      </div>
+
+      <p style="text-align:center;margin-top:48px;color:var(--ink-soft);max-width:32em;margin-left:auto;margin-right:auto;">
+        More stories will land here as families share them. Thank you for trusting me with your children.
+      </p>
+    </div>
+  </section>
+
+  <JoinTheGarden />
+</BaseLayout>

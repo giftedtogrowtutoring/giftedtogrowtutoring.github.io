@@ -1,0 +1,42 @@
+---
+// Hand-drawn decorative SVG wrapper.
+// Decorations live in /public/assets/deco-*.svg.
+//
+// Props:
+//   name        — file suffix (e.g. "sprout" → /assets/deco-sprout.svg)
+//   alt         — accessible label; defaults to decorative (aria-hidden)
+//   size        — convenience width in px
+//   class       — extra classes
+//   style       — inline style passthrough
+//   breathe     — adds .breathe animation
+//   offset      — staggers the breathe animation by 1.2s
+interface Props {
+  name: string;
+  alt?: string;
+  size?: number | string;
+  class?: string;
+  style?: string;
+  breathe?: boolean;
+  offset?: boolean;
+}
+
+const { name, alt = "", size, class: className = "", style = "", breathe = false, offset = false } = Astro.props;
+
+const classes = [
+  className,
+  breathe ? "breathe" : "",
+  offset ? "breathe--offset" : "",
+].filter(Boolean).join(" ");
+
+const widthStyle = size ? `width:${typeof size === "number" ? size + "px" : size};` : "";
+const composedStyle = `${widthStyle}${style}`;
+---
+<img
+  src={`/assets/deco-${name}.svg`}
+  alt={alt}
+  class={classes}
+  style={composedStyle}
+  aria-hidden={alt ? undefined : "true"}
+  loading="lazy"
+  decoding="async"
+/>

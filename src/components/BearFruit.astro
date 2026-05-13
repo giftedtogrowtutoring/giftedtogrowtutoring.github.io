@@ -1,0 +1,38 @@
+---
+import Deco from "./Deco.astro";
+import { testimonials } from "../data/testimonials.ts";
+---
+<section id="fruit" class="section-lavender">
+  <Deco name="sun"   class="scatter" style="top:32px;right:6%;width:70px;" />
+  <Deco name="heart" class="scatter" style="bottom:48px;left:6%;width:48px;transform:rotate(-12deg);" />
+
+  <div class="shell">
+    <div class="section-head">
+      <div class="eyebrow-row">
+        <span class="dot"></span>
+        <span class="eyebrow">Bear Fruit</span>
+      </div>
+      <h2 class="h1">What parents say after a few months.</h2>
+      <p class="lead">
+        Quiet, steady progress. The kind that lasts long after our sessions end.
+      </p>
+    </div>
+
+    <div class="quotes">
+      {testimonials.map((q) => (
+        <article class="quote">
+          <span class="mark" aria-hidden="true">&ldquo;</span>
+          <p class="body">{q.body}</p>
+          <div>
+            <div class="sig">{q.sig}</div>
+            <div class="meta">{q.meta}</div>
+          </div>
+        </article>
+      ))}
+    </div>
+
+    <p style="text-align:center;margin-top:36px;">
+      <a href="/testimonials/" class="btn btn-ghost">Read more stories</a>
+    </p>
+  </div>
+</section>

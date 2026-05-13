@@ -1,0 +1,48 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>Cards</title><link rel="stylesheet" href="_base.css">
+<style>
+  .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  .card {
+    border-radius: 16px; padding: 18px 20px; border: 1.5px solid var(--border-soft);
+    box-shadow: var(--shadow); position: relative; overflow: hidden;
+    display: flex; flex-direction: column; gap: 6px;
+  }
+  .card .eyebrow { font-family: var(--font-body); font-weight: 700; font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--plum); }
+  .card h4 { font-family: var(--font-display); font-weight: 700; font-size: 18px; color: var(--plum); margin: 0; }
+  .card p { font-family: var(--font-body); font-size: 13px; color: var(--ink-soft); margin: 0; line-height: 1.45; }
+  .card--lavender { background: var(--lavender); border-color: var(--lavender-deep); }
+  .card--lemon { background: var(--lemon); border-color: var(--lemon-deep); }
+  .card--orange { background: var(--orange); border-color: var(--orange-deep); }
+  .card--orange h4, .card--orange p, .card--orange .eyebrow { color: var(--cream); }
+  .card--plum { background: var(--plum); border-color: var(--plum-deep); }
+  .card--plum h4, .card--plum p, .card--plum .eyebrow { color: var(--cream); }
+  .deco { position: absolute; right: -12px; bottom: -12px; opacity: 0.55; width: 60px; }
+</style></head>
+<body><div class="card-frame">
+  <div class="grid">
+    <div class="card">
+      <div class="eyebrow">Cream / default</div>
+      <h4>Plant the Seed</h4>
+      <p>The patient first step. We meet your child where they are.</p>
+      <img class="deco" src="../assets/deco-sprout.svg">
+    </div>
+    <div class="card card--lavender">
+      <div class="eyebrow">Lavender variant</div>
+      <h4>Tend the Roots</h4>
+      <p>Weekly sessions, slowly building real fluency.</p>
+      <img class="deco" src="../assets/deco-leaf.svg">
+    </div>
+    <div class="card card--lemon">
+      <div class="eyebrow">Lemon variant</div>
+      <h4>For struggling readers</h4>
+      <p>Anxious parents start here.</p>
+      <img class="deco" src="../assets/deco-sun.svg">
+    </div>
+    <div class="card card--plum">
+      <div class="eyebrow">Plum variant</div>
+      <h4>Bear Fruit</h4>
+      <p>What parents say after a few months together.</p>
+      <img class="deco" src="../assets/deco-sparkle.svg">
+    </div>
+  </div>
+</div></body></html>

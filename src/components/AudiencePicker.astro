@@ -1,0 +1,50 @@
+---
+// Three audience paths; client-side script toggles .active.
+// Selection is stored in sessionStorage so it can persist while reading.
+const paths = [
+  { id: "anxious",    cls: "path-anxious",    t: "Worried about reading",  s: "My child is falling behind" },
+  { id: "homeschool", cls: "path-homeschool", t: "We homeschool",          s: "Supplement my curriculum" },
+  { id: "faith",      cls: "path-faith",      t: "Faith matters to us",    s: "A teacher with shared values" },
+];
+---
+<div role="tablist" aria-label="Which best describes you?" class="audience-row" id="audiencePicker">
+  {paths.map((p, i) => (
+    <button
+      type="button"
+      role="tab"
+      data-audience={p.id}
+      aria-selected={i === 0 ? "true" : "false"}
+      class={`aud-chip ${p.cls}${i === 0 ? " active" : ""}`}
+    >
+      <span class="stripe"></span>
+      <span class="t">{p.t}</span>
+      <span class="s">{p.s}</span>
+    </button>
+  ))}
+</div>
+
+<script>
+  const root = document.getElementById("audiencePicker");
+  if (root) {
+    const chips = Array.from(root.querySelectorAll<HTMLButtonElement>(".aud-chip"));
+    const apply = (id: string) => {
+      chips.forEach((c) => {
+        const active = c.dataset.audience === id;
+        c.classList.toggle("active", active);
+        c.setAttribute("aria-selected", active ? "true" : "false");
+      });
+      // Recolor any service-card top stripes that listen
+      document.querySelectorAll<HTMLElement>(".svc[data-audience-tinted]").forEach((el) => {
+        el.classList.remove("path-anxious", "path-homeschool", "path-faith");
+        el.classList.add(`path-${id}`);
+      });
+      try { sessionStorage.setItem("gtg-audience", id); } catch {}
+    };
+    chips.forEach((c) => c.addEventListener("click", () => c.dataset.audience && apply(c.dataset.audience)));
+
+    try {
+      const saved = sessionStorage.getItem("gtg-audience");
+      if (saved && chips.some((c) => c.dataset.audience === saved)) apply(saved);
+    } catch {}
+  }
+</script>

@@ -1,0 +1,31 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>Dividers</title><link rel="stylesheet" href="_base.css">
+<style>
+  .stack { display: flex; flex-direction: column; gap: 18px; }
+  .stack img { width: 100%; height: auto; }
+  .lbl { font-family: ui-monospace, monospace; font-size: 11px; color: var(--ink-soft); }
+  .lbl b { font-family: var(--font-body); color: var(--plum); font-size: 12px; }
+  .row { display: flex; align-items: center; gap: 12px; }
+  .row::before, .row::after { content: ""; flex: 1; border-top: 2px dotted var(--sage); }
+  .row .pip { width: 14px; height: 14px; border-radius: 50%; background: var(--lemon); border: 2px solid var(--plum); }
+</style></head>
+<body><div class="card-frame">
+  <div class="stack">
+    <div>
+      <img src="../assets/deco-divider-dots.svg" alt="">
+      <div class="lbl"><b>Dotted with lemon pip</b> · primary section divider</div>
+    </div>
+    <div>
+      <img src="../assets/deco-vine.svg" alt="">
+      <div class="lbl"><b>Curling vine</b> · used between Tend the Roots and Bear Fruit</div>
+    </div>
+    <div>
+      <img src="../assets/deco-underline.svg" alt="" style="height: 18px;">
+      <div class="lbl"><b>Wavy underline</b> · drawn beneath a key word inside a headline</div>
+    </div>
+    <div>
+      <div class="row"><span class="pip"></span></div>
+      <div class="lbl"><b>CSS dotted rule + lemon pip</b> · lightweight alternative for inline use</div>
+    </div>
+  </div>
+</div></body></html>

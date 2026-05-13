@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 90 90" width="90" height="90" role="img" aria-label="Sun with rays">
+  <circle cx="45" cy="45" r="20" fill="#F9D548" stroke="#3D1E6D" stroke-width="2.5"></circle>
+  <g stroke="#3D1E6D" stroke-width="2.5" stroke-linecap="round">
+    <path d="M45 4 L 45 16"></path>
+    <path d="M45 74 L 45 86"></path>
+    <path d="M4 45 L 16 45"></path>
+    <path d="M74 45 L 86 45"></path>
+    <path d="M16 16 L 24 24"></path>
+    <path d="M66 66 L 74 74"></path>
+    <path d="M74 16 L 66 24"></path>
+    <path d="M16 74 L 24 66"></path>
+  </g>
+</svg>

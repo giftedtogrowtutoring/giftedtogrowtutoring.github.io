@@ -1,0 +1,127 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Deco from "../components/Deco.astro";
+import JoinTheGarden from "../components/JoinTheGarden.astro";
+
+const title = "Tutoring Services & Pricing — K-6 Reading, Writing & Math | Gifted to Grow Tutoring";
+const description = "1:1, semi-private, and small-group K-6 tutoring in Sarasota & Bradenton. Homeschool partnerships and FL Step Up scholarships accepted. Free 15-minute consultation.";
+
+const services = [
+  {
+    name: "1:1 Private Tutoring",
+    rate: "$60 – $75",
+    per: "per session · 50 minutes",
+    bullets: [
+      "Fully personalized to your child",
+      "Reading, writing, math, or test prep",
+      "In-home, in my workspace, or Zoom",
+    ],
+    feature: true,
+  },
+  {
+    name: "2:1 Semi-Private",
+    rate: "$45 – $55",
+    per: "per student, per session",
+    bullets: [
+      "Two siblings or close friends",
+      "Same grade band recommended",
+      "Lower cost, same teacher",
+    ],
+  },
+  {
+    name: "Small Group (3–4 students)",
+    rate: "$35 – $45",
+    per: "per student, per session",
+    bullets: [
+      "Reading or math focus",
+      "Limited cohorts each season",
+      "Great for homeschool co-ops",
+    ],
+  },
+];
+---
+<BaseLayout title={title} description={description}>
+  <section class="section-cream" style="padding-top:64px;">
+    <Deco name="vine" class="scatter" style="bottom:0;right:0;width:50%;opacity:0.45;transform:scaleX(-1);" />
+    <div class="shell">
+      <div class="eyebrow-row">
+        <span class="dot"></span>
+        <span class="eyebrow">Tend the Roots</span>
+      </div>
+      <h1 class="display" style="max-width:18ch;">Tutoring that fits your child, not the other way around.</h1>
+      <p class="lead" style="max-width:36em;">
+        Every session is built around the child in front of me. Below are the most common ways
+        we work together — but if none of these quite fit, send me a note and we'll figure it out.
+      </p>
+    </div>
+  </section>
+
+  <section class="section-cream" style="padding-top:24px;">
+    <div class="shell">
+      <div class="pricing">
+        {services.map((s) => (
+          <div class={`price${s.feature ? " feature" : ""}`}>
+            <h3 style={s.feature ? "color:var(--plum);" : ""}>{s.name}</h3>
+            <div class="rate">{s.rate}</div>
+            <div class="per" style={s.feature ? "color:var(--plum);" : ""}>{s.per}</div>
+            <ul>
+              {s.bullets.map((b) => <li>{b}</li>)}
+            </ul>
+          </div>
+        ))}
+      </div>
+      <p style="margin-top:18px;font-size:14px;color:var(--ink-soft);">
+        <span class="needs-review">NEEDS REVIEW</span> Confirm exact rates with Jennifer before publishing.
+      </p>
+      <p class="hand hand--green" style="margin-top:32px;text-align:center;font-size:1.75rem;">
+        "Free 15-minute consultation call to find the right fit."
+      </p>
+    </div>
+  </section>
+
+  <section class="section-lavender">
+    <div class="shell">
+      <div class="two-col">
+        <div>
+          <div class="eyebrow-row">
+            <span class="dot"></span>
+            <span class="eyebrow">Homeschool partnership</span>
+          </div>
+          <h2>Help that fits beside your curriculum.</h2>
+          <p>
+            If you're homeschooling, I won't try to replace what you're doing. I'll come alongside it —
+            shoring up reading fluency, untangling a tricky math concept, or giving your child a steady
+            second teacher voice. We design the cadence together.
+          </p>
+          <p><strong>Pricing:</strong> Inquire — depends on cadence and group size.</p>
+        </div>
+        <div>
+          <div class="eyebrow-row">
+            <span class="dot"></span>
+            <span class="eyebrow">FL Step Up scholarship</span>
+          </div>
+          <h2>Accepted, with no out-of-pocket for qualifying families.</h2>
+          <p>
+            I'm a registered <strong>FL Step Up for Students Provider</strong>. If your family qualifies
+            for a scholarship, tutoring is covered — bring me the paperwork and I'll walk you through it.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-cream">
+    <div class="shell">
+      <div class="section-head center">
+        <h2>How a first session usually goes.</h2>
+      </div>
+      <ol style="max-width:620px;margin:0 auto;padding-left:24px;font-size:1.0625rem;line-height:1.7;color:var(--ink);">
+        <li><strong>The free intro call (15 min).</strong> You tell me about your child. I listen, take notes, and tell you honestly whether I'm the right fit.</li>
+        <li><strong>The first session.</strong> We meet — at your home, my workspace, or on Zoom. The first 10 minutes are about getting comfortable. Then we start with something they already know, so they leave proud.</li>
+        <li><strong>Ongoing rhythm.</strong> Most families settle into one or two sessions a week. I send a short note after each session so you know what we worked on and what to watch for.</li>
+      </ol>
+    </div>
+  </section>
+
+  <JoinTheGarden />
+</BaseLayout>

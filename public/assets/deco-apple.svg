@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" width="80" height="80" role="img" aria-label="Round apple">
+  <path d="M40 14 C 36 8 28 10 30 16" stroke="#5B8C3E" stroke-width="2.5" fill="none" stroke-linecap="round"></path>
+  <path d="M40 14 C 50 6 64 14 60 22" fill="#5B8C3E" stroke="#3D1E6D" stroke-width="2" stroke-linejoin="round"></path>
+  <path d="M40 22 C 18 22 8 40 12 56 C 16 72 32 76 40 70 C 48 76 64 72 68 56 C 72 40 62 22 40 22 Z" fill="#C7392F" stroke="#3D1E6D" stroke-width="3" stroke-linejoin="round"></path>
+  <ellipse cx="28" cy="38" rx="6" ry="3" fill="#FFF8EC" opacity="0.5"></ellipse>
+</svg>

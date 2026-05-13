@@ -1,0 +1,21 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>Shadow system</title><link rel="stylesheet" href="_base.css">
+<style>
+  .row { gap: 18px; padding: 16px 0 24px; align-items: stretch; }
+  .s {
+    background: var(--cream); border: 1.5px solid var(--border-soft);
+    border-radius: 16px; padding: 18px;
+    width: 150px; min-height: 90px;
+    display: flex; flex-direction: column; justify-content: flex-end;
+    font-family: ui-monospace, monospace; font-size: 11px; color: var(--ink-soft);
+  }
+  .s b { display:block; color: var(--plum); font-size: 13px; margin-bottom: 4px; font-family: var(--font-body); }
+</style></head>
+<body><div class="card-frame">
+  <div class="row">
+    <div class="s" style="box-shadow: 0 1px 2px rgba(61,30,109,0.08);"><b>--shadow-sm</b>resting chips</div>
+    <div class="s" style="box-shadow: 0 4px 12px rgba(61,30,109,0.10);"><b>--shadow</b>card default</div>
+    <div class="s" style="box-shadow: 0 8px 20px rgba(61,30,109,0.14);"><b>--shadow-lift</b>card hover</div>
+    <div class="s" style="background: var(--lemon); border-color: var(--lemon-deep); box-shadow: 0 6px 20px rgba(249,213,72,0.45);"><b style="color: var(--plum);">--shadow-glow-lemon</b><span style="color: var(--plum);">CTA hover</span></div>
+  </div>
+</div></body></html>

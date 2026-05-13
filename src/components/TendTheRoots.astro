@@ -1,0 +1,61 @@
+---
+import Deco from "./Deco.astro";
+
+const services = [
+  {
+    key: "reading",
+    title: "Reading",
+    body: "Phonics, fluency, comprehension. We diagnose what's missing and rebuild it gently. Reading Endorsed and ESOL Endorsed.",
+    deco: "book",
+    icon: `<svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>`,
+  },
+  {
+    key: "writing",
+    title: "Writing",
+    body: "From a hesitant sentence to a confident paragraph. Handwriting, spelling, structure — and the courage to say what they mean.",
+    deco: "pencil",
+    icon: `<svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 1 1 3 3L7 19l-4 1 1-4z"/></svg>`,
+  },
+  {
+    key: "math",
+    title: "Math",
+    body: "Number sense first, then the steps. We use manipulatives, paper, and real-life problems so the why comes before the how.",
+    deco: "apple",
+    icon: `<svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="2" width="16" height="20" rx="2"/><line x1="8" y1="6" x2="16" y2="6"/><line x1="8" y1="10" x2="10" y2="10"/><line x1="12" y1="10" x2="14" y2="10"/><line x1="16" y1="10" x2="16" y2="10"/><line x1="8" y1="14" x2="10" y2="14"/><line x1="12" y1="14" x2="14" y2="14"/><line x1="16" y1="14" x2="16" y2="14"/><line x1="8" y1="18" x2="10" y2="18"/><line x1="12" y1="18" x2="14" y2="18"/><line x1="16" y1="18" x2="16" y2="18"/></svg>`,
+  },
+];
+---
+<section id="roots" class="section-cream">
+  <Deco name="vine" class="scatter" style="top:0;left:0;width:60%;opacity:0.55;" />
+  <div class="shell">
+    <div class="section-head">
+      <div class="eyebrow-row">
+        <span class="dot"></span>
+        <span class="eyebrow">Tend the Roots</span>
+      </div>
+      <h2 class="h1">What a session looks like.</h2>
+      <p class="lead">
+        Fifty minutes, one-on-one. In your home in Sarasota or Bradenton, in my workspace,
+        or over Zoom. We start by getting your child comfortable.
+        Then we work — patiently — on the thing that's been hard.
+      </p>
+    </div>
+
+    <div class="services">
+      {services.map((s) => (
+        <article class="svc path-anxious" data-audience-tinted>
+          <span class="icon" set:html={s.icon} />
+          <h3>{s.title}</h3>
+          <p>{s.body}</p>
+          <Deco name={s.deco} class="deco" />
+        </article>
+      ))}
+    </div>
+
+    <div style="margin-top:48px;text-align:center;">
+      <p class="hand" style="color:var(--plum);font-size:1.75rem;">
+        "First conversation is always free — and never a sales pitch."
+      </p>
+    </div>
+  </div>
+</section>

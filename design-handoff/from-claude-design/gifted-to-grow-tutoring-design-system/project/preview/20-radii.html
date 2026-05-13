@@ -1,0 +1,18 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>Corner radii</title><link rel="stylesheet" href="_base.css">
+<style>
+  .row { gap: 14px; align-items: flex-end; }
+  .r { background: var(--plum); width: 110px; height: 88px; box-shadow: var(--shadow); display: flex; align-items: flex-end; justify-content: center; padding: 8px; }
+  .r span { font-family: ui-monospace, monospace; font-size: 11px; color: var(--lemon); font-weight: 700; }
+  .lbl { font-family: ui-monospace, monospace; font-size: 11px; color: var(--ink-soft); margin-top: 10px; text-align: center; }
+  .item { display: flex; flex-direction: column; align-items: center; }
+</style></head>
+<body><div class="card-frame">
+  <div class="row">
+    <div class="item"><div class="r" style="border-radius:8px"><span>8</span></div><div class="lbl">--r-sm</div></div>
+    <div class="item"><div class="r" style="border-radius:16px; background: var(--lemon);"><span style="color: var(--plum);">16</span></div><div class="lbl">--r · default</div></div>
+    <div class="item"><div class="r" style="border-radius:24px"><span>24</span></div><div class="lbl">--r-lg</div></div>
+    <div class="item"><div class="r" style="border-radius:32px"><span>32</span></div><div class="lbl">--r-xl</div></div>
+    <div class="item"><div class="r" style="border-radius:999px; background: var(--orange);"><span style="color: var(--cream);">999</span></div><div class="lbl">--r-pill</div></div>
+  </div>
+</div></body></html>

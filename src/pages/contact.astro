@@ -1,0 +1,164 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Deco from "../components/Deco.astro";
+import Character from "../components/Character.astro";
+import { business } from "../data/business.ts";
+
+const title = "Contact Jennifer — Send a Note | Gifted to Grow Tutoring";
+const description = "Tell Jennifer about your child. The first 15-minute call is free. She'll write back within one business day.";
+
+// Web3Forms — Jennifer will need to register at https://web3forms.com and put the access key here.
+// Until she does, the form will fail gracefully and show a polite error.
+const WEB3FORMS_ACCESS_KEY = "{{ NEEDS REVIEW: Web3Forms access key }}";
+---
+<BaseLayout title={title} description={description}>
+  <section class="section-cream" style="padding-top:64px;">
+    <Deco name="pencil" class="scatter" style="top:24px;right:6%;width:80px;transform:rotate(20deg);" />
+    <Deco name="seed"   class="scatter" style="bottom:32px;left:8%;width:28px;opacity:0.7;" />
+
+    <div class="shell">
+      <div class="two-col" style="align-items:flex-start;">
+        <div>
+          <div class="eyebrow-row">
+            <span class="dot"></span>
+            <span class="eyebrow">Join the Garden</span>
+          </div>
+          <h1 class="display" style="max-width:14ch;">Tell me about your child.</h1>
+          <p class="lead">
+            A sentence or two is plenty. The first 15-minute conversation is free, and you'll
+            hear back from me — Jennifer — within one business day.
+          </p>
+
+          <div style="margin-top:32px;">
+            <p class="hand hand--green" style="font-size:1.75rem;">
+              "I'll write back the same day, promise."
+            </p>
+          </div>
+
+          <div style="margin-top:32px;padding-top:24px;border-top:2px dotted var(--sage);">
+            <p style="margin:0 0 8px;"><strong>Prefer to call?</strong></p>
+            <a href={`tel:${business.phoneTel}`} class="phone-link" style="font-size:1.25rem;">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              {business.phoneDisplay}
+            </a>
+            <p style="margin:8px 0 0;color:var(--ink-soft);font-size:14px;">Same teacher, either way.</p>
+          </div>
+        </div>
+
+        <div class="card" style="padding:36px;">
+          <form
+            id="contactForm"
+            action="https://api.web3forms.com/submit"
+            method="POST"
+          >
+            <input type="hidden" name="access_key" value={WEB3FORMS_ACCESS_KEY} />
+            <input type="hidden" name="subject" value="A new family wrote in — Gifted to Grow" />
+            <input type="hidden" name="from_name" value="giftedtogrowtutoring.com" />
+            <input type="hidden" name="redirect" value={`${business.url}/thanks/`} />
+            <input type="checkbox" name="botcheck" tabindex="-1" autocomplete="off" style="display:none;visibility:hidden;" />
+
+            <div class="field-row">
+              <div class="field">
+                <label for="name">Your name</label>
+                <input id="name" name="name" type="text" required autocomplete="name" />
+              </div>
+              <div class="field">
+                <label for="email">Email</label>
+                <input id="email" name="email" type="email" required autocomplete="email" />
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="phone">Phone <span style="font-weight:400;color:var(--ink-soft);">(optional — if you prefer a call back)</span></label>
+              <input id="phone" name="phone" type="tel" autocomplete="tel" />
+            </div>
+
+            <div class="field">
+              <label for="grade">Child's grade level</label>
+              <select id="grade" name="grade" required>
+                <option value="">Choose one</option>
+                <option>Kindergarten</option>
+                <option>1st grade</option>
+                <option>2nd grade</option>
+                <option>3rd grade</option>
+                <option>4th grade</option>
+                <option>5th grade</option>
+                <option>6th grade</option>
+                <option>Other</option>
+              </select>
+            </div>
+
+            <fieldset class="field" style="border:none;padding:0;margin-bottom:16px;">
+              <legend style="font-family:var(--font-body);font-weight:700;font-size:14px;color:var(--plum);margin-bottom:8px;padding:0;">
+                What are you looking for help with?
+              </legend>
+              <div class="checkbox-grid">
+                <label class="checkbox-row"><input type="checkbox" name="help[]" value="Reading" /> Reading</label>
+                <label class="checkbox-row"><input type="checkbox" name="help[]" value="Writing" /> Writing</label>
+                <label class="checkbox-row"><input type="checkbox" name="help[]" value="Math" /> Math</label>
+                <label class="checkbox-row"><input type="checkbox" name="help[]" value="Test prep" /> Test prep</label>
+                <label class="checkbox-row"><input type="checkbox" name="help[]" value="Homeschool support" /> Homeschool support</label>
+                <label class="checkbox-row"><input type="checkbox" name="help[]" value="Executive function" /> Executive function</label>
+                <label class="checkbox-row"><input type="checkbox" name="help[]" value="Not sure yet" /> Not sure yet</label>
+              </div>
+            </fieldset>
+
+            <div class="field">
+              <label for="message">Anything Jennifer should know? <span style="font-weight:400;color:var(--ink-soft);">(optional)</span></label>
+              <textarea id="message" name="message" rows="4" placeholder="She loved books last year. Now she avoids them. I'd love to talk."></textarea>
+            </div>
+
+            <div class="field">
+              <label for="hear">How did you hear about us? <span style="font-weight:400;color:var(--ink-soft);">(optional)</span></label>
+              <select id="hear" name="hear">
+                <option value="">Choose one</option>
+                <option>Friend or family</option>
+                <option>Another teacher</option>
+                <option>Google search</option>
+                <option>Social media</option>
+                <option>FL Step Up directory</option>
+                <option>Other</option>
+              </select>
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;margin-top:8px;">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+              Send Jennifer a Note
+            </button>
+
+            <p style="font-size:13px;color:var(--ink-soft);text-align:center;margin-top:12px;">
+              Jennifer will respond within one business day.
+            </p>
+          </form>
+          <p id="contactStatus" role="status" aria-live="polite" style="margin-top:12px;font-size:14px;color:var(--orange-deep);"></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-lavender" style="padding:56px 0;">
+    <div class="shell" style="display:flex;flex-direction:column;align-items:center;text-align:center;gap:12px;">
+      <Character kind="lemon" size={70} />
+      <p style="max-width:34em;margin:0;color:var(--ink-soft);">
+        Your information is read only by Jennifer. No newsletter list. No outside sharing.
+        Just a real person reading a real note.
+      </p>
+    </div>
+  </section>
+
+  <script is:inline>
+    // Progressive enhancement: intercept submission if access_key isn't configured.
+    const form = document.getElementById("contactForm");
+    const status = document.getElementById("contactStatus");
+    if (form && status) {
+      const access = form.querySelector('input[name="access_key"]');
+      if (access && access.value.includes("NEEDS REVIEW")) {
+        form.addEventListener("submit", (e) => {
+          e.preventDefault();
+          status.textContent =
+            "This form isn't fully wired up yet — please email jennifer@giftedtogrowtutoring.com or call (941) 586-8421.";
+        });
+      }
+    }
+  </script>
+</BaseLayout>

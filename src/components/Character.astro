@@ -1,0 +1,25 @@
+---
+interface Props {
+  kind: "lemon" | "orange";
+  size?: number | string;
+  class?: string;
+  style?: string;
+  offset?: boolean;
+  alt?: string;
+}
+
+const { kind, size = 120, class: className = "", style = "", offset = false, alt } = Astro.props;
+
+const classes = ["breathe", offset ? "breathe--offset" : "", className].filter(Boolean).join(" ");
+const widthAttr = typeof size === "number" ? `${size}` : size;
+---
+<img
+  src={`/assets/character-${kind}.svg`}
+  alt={alt ?? ""}
+  aria-hidden={alt ? undefined : "true"}
+  width={widthAttr}
+  class={classes}
+  style={`height:auto;${style}`}
+  loading="lazy"
+  decoding="async"
+/>

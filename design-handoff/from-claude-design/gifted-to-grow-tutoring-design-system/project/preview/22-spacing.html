@@ -1,0 +1,25 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>Spacing — 8px base grid</title><link rel="stylesheet" href="_base.css">
+<style>
+  .row { gap: 0; align-items: flex-end; padding: 12px 0; }
+  .bar { background: var(--plum); border-radius: 4px 4px 0 0; margin-right: 16px; position: relative; min-width: 8px; }
+  .bar::after {
+    content: attr(data-l); position: absolute; bottom: -22px; left: 50%; transform: translateX(-50%);
+    font-family: ui-monospace, monospace; font-size: 10px; color: var(--ink-soft); white-space: nowrap;
+  }
+  .legend { font-family: ui-monospace, monospace; font-size: 11px; color: var(--ink-soft); margin-top: 30px; }
+</style></head>
+<body><div class="card-frame">
+  <div class="row">
+    <div class="bar" data-l="4 · s-1"   style="width: 8px;  height: 4px;"></div>
+    <div class="bar" data-l="8 · s-2"   style="width: 8px;  height: 8px;"></div>
+    <div class="bar" data-l="12 · s-3"  style="width: 12px; height: 12px;"></div>
+    <div class="bar" data-l="16 · s-4"  style="width: 16px; height: 16px;"></div>
+    <div class="bar" data-l="24 · s-5"  style="width: 22px; height: 24px;"></div>
+    <div class="bar" data-l="32 · s-6"  style="width: 28px; height: 32px;"></div>
+    <div class="bar" data-l="48 · s-7"  style="width: 36px; height: 48px;"></div>
+    <div class="bar" data-l="64 · s-8"  style="width: 44px; height: 64px;"></div>
+    <div class="bar" data-l="96 · s-9"  style="width: 52px; height: 96px;"></div>
+  </div>
+  <div class="legend">8px base grid · use <b>--s-9 (96px)</b> for section padding desktop, <b>--s-7 (48px)</b> mobile</div>
+</div></body></html>

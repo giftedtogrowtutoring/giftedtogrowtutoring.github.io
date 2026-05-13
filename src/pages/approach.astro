@@ -1,0 +1,101 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Deco from "../components/Deco.astro";
+import JoinTheGarden from "../components/JoinTheGarden.astro";
+
+const title = "Our Approach — Gifts-First, Patient, Faith-Rooted | Gifted to Grow Tutoring";
+const description = "How Jennifer teaches: starting with what your child already does well, building executive-function habits, and moving at a pace that lets confidence catch up to skill.";
+
+const principles = [
+  {
+    n: "01",
+    t: "Start with what's already strong.",
+    p: "Before we touch what's hard, we name what your child already does well. Confidence is the soil — without it, nothing else takes root.",
+  },
+  {
+    n: "02",
+    t: "Slow is smooth. Smooth is fast.",
+    p: "We don't race. We build a small thing securely, then the next small thing, until the whole stack is steady. Children who feel safe taking small steps eventually take large ones.",
+  },
+  {
+    n: "03",
+    t: "Executive function counts as a skill.",
+    p: "Following a multi-step direction, keeping track of a backpack, knowing how to start a hard problem — these are taught, not assumed. We practice them on purpose.",
+  },
+  {
+    n: "04",
+    t: "Parents are partners, not spectators.",
+    p: "After each session, I send a short note: what we worked on, what we noticed, one thing to try at home. You should never wonder what's happening in the hour I'm with your child.",
+  },
+  {
+    n: "05",
+    t: "Faith shows up as patience.",
+    p: "Faith is part of who I am. It doesn't come as a curriculum or a quiz. It comes as steadiness on slow days and belief in each child's worth — and it's offered, never imposed.",
+  },
+  {
+    n: "06",
+    t: "Hold the bar high. Hold the child higher.",
+    p: "Expectations stay real and grade-appropriate. The compassion stays bigger than the expectations. Both, always — never one without the other.",
+  },
+];
+---
+<BaseLayout title={title} description={description}>
+  <section class="section-cream" style="padding-top:64px;">
+    <Deco name="sprout" class="scatter" style="top:24px;left:8%;width:80px;" />
+    <Deco name="sun"    class="scatter" style="top:24px;right:8%;width:70px;" />
+    <div class="shell">
+      <div class="eyebrow-row">
+        <span class="dot"></span>
+        <span class="eyebrow">Our Philosophy</span>
+      </div>
+      <h1 class="display" style="max-width:16ch;">Gifts-first teaching. Patient pacing. Real progress.</h1>
+      <p class="lead" style="max-width:36em;">
+        After twenty-five years of K–6 classrooms, I've watched what actually moves children forward.
+        It almost never looks like a worksheet stack. It almost always looks like this.
+      </p>
+    </div>
+  </section>
+
+  <section class="section-cream" style="padding-top:24px;">
+    <div class="shell">
+      <div class="principles">
+        {principles.map((p) => (
+          <article class="principle">
+            <span class="num" aria-hidden="true">{p.n}</span>
+            <h3>{p.t}</h3>
+            <p style="color:var(--ink-soft);margin:0;">{p.p}</p>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section-lavender">
+    <div class="shell">
+      <div class="two-col">
+        <div>
+          <h2>What I won't do.</h2>
+          <ul style="line-height:1.8;font-size:1.0625rem;">
+            <li>Promise a grade jump — no one honest can.</li>
+            <li>Pull a worksheet stack from a binder.</li>
+            <li>Make your child feel small for not knowing yet.</li>
+            <li>Pressure you into more sessions than your family needs.</li>
+            <li>Treat faith as a gate. Families of every background are welcome.</li>
+          </ul>
+        </div>
+        <div>
+          <h2>What I will do.</h2>
+          <ul style="line-height:1.8;font-size:1.0625rem;">
+            <li>Read every parent note myself, same day.</li>
+            <li>Send a short summary after every session.</li>
+            <li>Tell you honestly if I'm not the right fit.</li>
+            <li>Celebrate the small wins — they're how the big ones happen.</li>
+            <li>Show up patient, week after week.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <JoinTheGarden />
+</BaseLayout>

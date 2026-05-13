@@ -1,0 +1,22 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Hero from "../components/Hero.astro";
+import PlantTheSeed from "../components/PlantTheSeed.astro";
+import TendTheRoots from "../components/TendTheRoots.astro";
+import AboutTeaser from "../components/AboutTeaser.astro";
+import BearFruit from "../components/BearFruit.astro";
+import FaithSection from "../components/FaithSection.astro";
+import JoinTheGarden from "../components/JoinTheGarden.astro";
+
+const title = "Gifted to Grow Tutoring — K-6 Reading, Writing & Math in Sarasota / Bradenton, FL";
+const description = "One certified educator. Twenty-five years in K-6 classrooms. Patient one-on-one reading, writing & math tutoring in Sarasota and Bradenton. FL Step Up Provider.";
+---
+<BaseLayout title={title} description={description}>
+  <Hero />
+  <PlantTheSeed />
+  <TendTheRoots />
+  <AboutTeaser />
+  <BearFruit />
+  <FaithSection />
+  <JoinTheGarden />
+</BaseLayout>

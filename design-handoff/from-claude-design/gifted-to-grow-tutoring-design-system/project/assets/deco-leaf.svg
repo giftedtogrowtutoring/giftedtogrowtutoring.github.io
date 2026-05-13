@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 90 60" width="90" height="60" role="img" aria-label="Single leaf">
+  <path d="M8 50 C 18 18 50 6 80 12 C 76 36 50 56 18 56 Z" fill="#A8C49A" stroke="#3D1E6D" stroke-width="2.5" stroke-linejoin="round"></path>
+  <path d="M14 50 C 36 42 60 28 78 14" stroke="#3D1E6D" stroke-width="1.8" fill="none" opacity="0.5"></path>
+  <path d="M30 42 q 6 -6 14 -10 M44 38 q 6 -8 16 -12 M22 46 q 4 -4 10 -8" stroke="#3D1E6D" stroke-width="1.2" fill="none" opacity="0.4"></path>
+</svg>
