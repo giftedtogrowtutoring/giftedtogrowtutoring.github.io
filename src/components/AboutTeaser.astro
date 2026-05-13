@@ -1,19 +1,19 @@
 ---
 import Deco from "./Deco.astro";
-import Character from "./Character.astro";
+import { Image } from "astro:assets";
+import jenniferPhoto from "../assets/jennifer-pollard.png";
 ---
 <section id="about" class="section-cream" style="padding-top:32px;">
   <div class="shell">
     <div class="two-col">
-      <div class="photo-ph" data-placeholder>
-        <Deco name="sparkle" style="position:absolute;top:16px;right:16px;width:36px;" />
-        <div style="text-align:center;padding:24px;">
-          <Character kind="lemon" size={88} />
-          <div class="hand" style="color:var(--plum);opacity:0.65;margin-top:12px;font-size:1.5rem;">
-            Photo of Jennifer<br/>goes here
-          </div>
-          <div class="needs-review" style="margin-top:14px;">NEEDS REVIEW: real photo</div>
-        </div>
+      <div class="photo-ph">
+        <Deco name="sparkle" style="position:absolute;top:16px;right:16px;width:36px;z-index:1;" />
+        <Image
+          src={jenniferPhoto}
+          alt="Jennifer Pollard, founder of Gifted to Grow Tutoring"
+          loading="eager"
+          style="width:100%;height:100%;object-fit:cover;object-position:center top;display:block;"
+        />
       </div>
 
       <div>

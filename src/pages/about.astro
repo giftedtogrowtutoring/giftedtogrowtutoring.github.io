@@ -1,8 +1,9 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import Deco from "../components/Deco.astro";
-import Character from "../components/Character.astro";
 import JoinTheGarden from "../components/JoinTheGarden.astro";
+import { Image } from "astro:assets";
+import jenniferPhoto from "../assets/jennifer-pollard.png";
 
 const title = "About Jennifer Pollard — 25 Years in K-6 Classrooms | Gifted to Grow Tutoring";
 const description = "Jennifer Pollard is a Florida-certified PreK-6 educator with 25 years of experience, Reading Endorsed and ESOL Endorsed. Meet the teacher behind Gifted to Grow.";
@@ -30,15 +31,14 @@ const description = "Jennifer Pollard is a Florida-certified PreK-6 educator wit
   <section class="section-cream" style="padding-top:24px;">
     <div class="shell">
       <div class="two-col">
-        <div class="photo-ph" data-placeholder>
-          <Deco name="sparkle" style="position:absolute;top:16px;right:16px;width:36px;" />
-          <div style="text-align:center;padding:24px;">
-            <Character kind="orange" size={100} />
-            <div class="hand" style="color:var(--plum);opacity:0.65;margin-top:12px;font-size:1.5rem;">
-              Photo of Jennifer<br/>at her desk
-            </div>
-            <div class="needs-review" style="margin-top:14px;">NEEDS REVIEW: real photo</div>
-          </div>
+        <div class="photo-ph">
+          <Deco name="sparkle" style="position:absolute;top:16px;right:16px;width:36px;z-index:1;" />
+          <Image
+            src={jenniferPhoto}
+            alt="Jennifer Pollard, founder of Gifted to Grow Tutoring"
+            loading="eager"
+            style="width:100%;height:100%;object-fit:cover;object-position:center top;display:block;"
+          />
         </div>
 
         <div>
