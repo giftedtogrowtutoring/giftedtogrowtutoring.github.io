@@ -77,6 +77,12 @@
   --s-1: 4px;  --s-2: 8px;  --s-3: 12px; --s-4: 16px; --s-5: 24px;
   --s-6: 32px; --s-7: 48px; --s-8: 64px; --s-9: 96px; --s-10: 128px;
 
+  /* MOBILE SECTION RHYTHM
+     Canonical mobile breakpoint is 640px; these values drive the
+     section padding + section-head spacing below it. */
+  --space-section-mobile:      56px;
+  --space-section-head-mobile: 32px;
+
   /* RADII */
   --r-sm:  8px;
   --r:     16px;
