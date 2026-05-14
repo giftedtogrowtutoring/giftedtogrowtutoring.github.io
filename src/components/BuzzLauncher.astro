@@ -16,14 +16,20 @@ import beeIdle from "../assets/bee-mascot-idle.png";
   </span>
 
   <span class="buzz-mascot-wrap" aria-hidden="true">
-    <Image
-      src={beeIdle}
-      alt=""
-      width={240}
-      height={240}
-      loading="lazy"
-      class="buzz-mascot"
-    />
+    <span class="buzz-mascot-bob">
+      <span class="buzz-mascot-drift">
+        <span class="buzz-mascot-wobble">
+          <Image
+            src={beeIdle}
+            alt=""
+            width={360}
+            height={360}
+            loading="lazy"
+            class="buzz-mascot"
+          />
+        </span>
+      </span>
+    </span>
   </span>
 
   <span class="buzz-pill" aria-hidden="true">
@@ -113,12 +119,12 @@ import beeIdle from "../assets/bee-mascot-idle.png";
     transform: translateY(0);
   }
 
-  /* Mascot */
+  /* Mascot wrap — handles hover-tilt only, hosts drop shadow */
   .buzz-mascot-wrap {
     display: block;
-    width: 120px;
-    height: 120px;
-    filter: drop-shadow(0 8px 10px rgba(61, 30, 109, 0.22));
+    width: 180px;
+    height: 180px;
+    filter: drop-shadow(0 10px 12px rgba(61, 30, 109, 0.22));
     transition: transform 200ms var(--ease-soft);
     transform-origin: center bottom;
   }
@@ -126,6 +132,45 @@ import beeIdle from "../assets/bee-mascot-idle.png";
   .buzz-launcher:focus-visible .buzz-mascot-wrap {
     transform: rotate(-4deg) translateY(-4px);
   }
+
+  /* Idle animation stack — three nested layers compose three independent
+     transform axes at different periods. Each layer must fill its parent
+     so the bee inherits the wrap's pixel size. */
+  .buzz-mascot-bob,
+  .buzz-mascot-drift,
+  .buzz-mascot-wobble {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+  .buzz-mascot-bob    { animation: buzz-bob    3s ease-in-out infinite; }
+  .buzz-mascot-drift  { animation: buzz-drift  4s ease-in-out infinite; }
+  .buzz-mascot-wobble { animation: buzz-wobble 5s ease-in-out infinite; }
+
+  @keyframes buzz-bob {
+    0%, 100% { transform: translateY(-6px); }
+    50%      { transform: translateY(6px); }
+  }
+  @keyframes buzz-drift {
+    0%, 100% { transform: translateX(-2.5px); }
+    50%      { transform: translateX(2.5px); }
+  }
+  @keyframes buzz-wobble {
+    0%, 100% { transform: rotate(-1.5deg); }
+    50%      { transform: rotate(1.5deg); }
+  }
+
+  /* Pause idle layers on hover/focus so the wrap-level hover-tilt
+     reads cleanly. Pause-and-resume preserves phase — no snap. */
+  .buzz-launcher:hover .buzz-mascot-bob,
+  .buzz-launcher:hover .buzz-mascot-drift,
+  .buzz-launcher:hover .buzz-mascot-wobble,
+  .buzz-launcher:focus-visible .buzz-mascot-bob,
+  .buzz-launcher:focus-visible .buzz-mascot-drift,
+  .buzz-launcher:focus-visible .buzz-mascot-wobble {
+    animation-play-state: paused;
+  }
+
   .buzz-mascot {
     width: 100%;
     height: 100%;
@@ -165,7 +210,9 @@ import beeIdle from "../assets/bee-mascot-idle.png";
     50%      { transform: scale(1.03); }
   }
 
-  /* Collapsed (40px) */
+  /* Collapsed (40px) — idle loops disabled so the tiny circle doesn't
+     visibly jitter (a ±6px bob inside a 40px container reads as ~30%
+     of the element height). */
   .buzz-launcher.is-collapsed .buzz-bubble,
   .buzz-launcher.is-collapsed .buzz-pill {
     display: none;
@@ -180,12 +227,19 @@ import beeIdle from "../assets/bee-mascot-idle.png";
     box-shadow: var(--shadow-lift);
     filter: none;
   }
+  .buzz-launcher.is-collapsed .buzz-mascot-bob,
+  .buzz-launcher.is-collapsed .buzz-mascot-drift,
+  .buzz-launcher.is-collapsed .buzz-mascot-wobble {
+    animation: none;
+    transform: none;
+  }
   .buzz-launcher.is-collapsed:hover .buzz-mascot-wrap,
   .buzz-launcher.is-collapsed:focus-visible .buzz-mascot-wrap {
     transform: rotate(-6deg) translateY(-2px) scale(1.05);
   }
 
-  /* Mobile */
+  /* Mobile — bee returns to 80px; bubble & pill unchanged from desktop
+     except for their existing mobile font/padding overrides. */
   @media (max-width: 640px) {
     .buzz-launcher {
       right: 16px;
@@ -211,15 +265,19 @@ import beeIdle from "../assets/bee-mascot-idle.png";
     .buzz-launcher,
     .buzz-bubble,
     .buzz-mascot-wrap,
+    .buzz-mascot-bob,
+    .buzz-mascot-drift,
+    .buzz-mascot-wobble,
     .buzz-pill,
     .buzz-pill__arrow {
       transition: opacity 200ms linear !important;
       animation: none !important;
+      transform: none !important;
     }
-    .buzz-launcher.is-hidden { transform: none; }
+    .buzz-launcher.is-hidden { transform: none !important; }
     .buzz-launcher:hover .buzz-mascot-wrap,
     .buzz-launcher:focus-visible .buzz-mascot-wrap {
-      transform: none;
+      transform: none !important;
     }
   }
 </style>
