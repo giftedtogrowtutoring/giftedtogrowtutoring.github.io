@@ -441,10 +441,22 @@ i[data-lucide] { stroke-width: 2; }
    via attribute selectors + !important where necessary.
    =========================================================== */
 @media (max-width: 640px) {
-  /* F — consistent section rhythm. */
-  section {
-    padding: var(--space-section-mobile) 0 !important;
+  /* Decorative scatter SVGs (leaf, sprout, sparkle, seed) are positioned
+     to flank left-aligned desktop content. Mobile centres the content,
+     so these collide with the eyebrow / heading. Hide them on mobile —
+     the bee mascot and Tend the Roots vine are the surviving illustration. */
+  .scatter {
+    display: none;
   }
+
+  /* F — consistent section rhythm. The existing 720px rule already
+     sets section { padding: 56px 0 } via the cascade, so non-inline-
+     styled sections get the right value automatically. We only need
+     to beat inline page overrides for hero-padded sections. Critical:
+     do NOT add a global section { ... !important } rule here — it
+     would override component-level intentional paddings like
+     .roots-section { padding-top: 120px } that exist to give
+     decorative anchors (the vine) room to live. */
   section[style*="padding-top:64px"],
   section[style*="padding-top: 64px"] {
     padding-top: var(--space-section-mobile) !important;
