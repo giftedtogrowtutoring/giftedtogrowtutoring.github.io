@@ -26,7 +26,7 @@ const services = [
 ];
 ---
 <section id="roots" class="section-cream roots-section">
-  <Deco name="vine" class="roots-vine" style="position:absolute;top:32px;left:50%;transform:translateX(-50%);width:min(80%,420px);opacity:0.55;pointer-events:none;" />
+  <Deco name="vine" class="roots-vine" style="position:absolute;top:32px;left:50%;transform:translateX(-50%);width:min(92%,760px);opacity:0.55;pointer-events:none;" />
   <div class="shell">
     <div class="section-head">
       <div class="eyebrow-row">
@@ -61,8 +61,20 @@ const services = [
 </section>
 
 <style>
-  .roots-section { padding-top: 170px; }
+  .roots-section { padding-top: 190px; }
+  .roots-section .section-head {
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+  .roots-section .section-head .lead {
+    max-width: 720px;
+    margin-left: auto;
+    margin-right: auto;
+  }
   @media (max-width: 720px) {
-    .roots-section { padding-top: 120px; }
+    .roots-section { padding-top: 140px; }
+    .roots-section .roots-vine { width: min(96%, 620px) !important; top: 26px !important; }
   }
 </style>
