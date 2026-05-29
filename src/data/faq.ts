@@ -61,7 +61,7 @@ export const faq: readonly FaqEntry[] = [
     id: "get-started",
     question: "How do I get started?",
     answer:
-      "Send me a note through the contact form on this site, or call me at (941) 586-8421. I respond to every message myself, usually the same day.",
+      "Send me a note through the contact form on this site, or call me at (941) 586-8421. Jennifer will get back to you within 48 hours.",
     aliases: [
       "how do i sign up",
       "how do i schedule",
@@ -211,7 +211,7 @@ export const faq: readonly FaqEntry[] = [
     id: "response-time",
     question: "How quickly will you respond if I reach out?",
     answer:
-      "I read every note myself, and I'll write back the same day — within one business day at the latest.",
+      "Thanks for reaching out! Jennifer will get back to you within 48 hours.",
     aliases: [
       "how fast do you respond",
       "when will you reply",
