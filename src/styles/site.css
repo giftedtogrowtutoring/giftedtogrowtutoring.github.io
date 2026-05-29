@@ -692,3 +692,30 @@ i[data-lucide] { stroke-width: 2; }
     padding-left: 22px;
   }
 }
+
+/* Parent FAQ cards */
+.faq-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+.faq-card {
+  padding: 24px;
+}
+.faq-card h3 {
+  margin: 0 0 10px;
+  font-size: 1.125rem;
+  color: var(--plum);
+}
+.faq-card p {
+  margin: 0;
+  color: var(--ink-soft);
+  line-height: 1.6;
+}
+@media (max-width: 940px) {
+  .faq-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 640px) {
+  .faq-grid { grid-template-columns: 1fr; }
+  .faq-card { padding: 20px; }
+}

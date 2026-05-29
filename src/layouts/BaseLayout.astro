@@ -11,18 +11,30 @@ interface Props {
   description: string;
   /** Optional path-style OG image; falls back to logo. */
   ogImage?: string;
+  /** Optional page-specific JSON-LD objects. */
+  extraSchema?: Record<string, unknown> | Record<string, unknown>[];
+  /** Hide utility pages such as thank-you and 404 pages from search results. */
+  noindex?: boolean;
 }
 
-const { title, description, ogImage = "/assets/logo-full.png" } = Astro.props;
+const {
+  title,
+  description,
+  ogImage = "/assets/logo-full.png",
+  extraSchema = [],
+  noindex = false,
+} = Astro.props;
 const canonical = new URL(Astro.url.pathname, Astro.site ?? business.url).toString();
+const absoluteOgImage = new URL(ogImage, Astro.site ?? business.url).toString();
+const schemaExtras = Array.isArray(extraSchema) ? extraSchema : [extraSchema];
 
-const localBusinessSchema = {
+const organizationSchema = {
   "@context": "https://schema.org",
-  "@type": "LocalBusiness",
-  "@id": `${business.url}/#business`,
+  "@type": ["EducationalOrganization", "LocalBusiness"],
+  "@id": `${business.url}/#organization`,
   name: business.name,
-  image: `${business.url}${ogImage}`,
-  url: business.url,
+  image: absoluteOgImage,
+  url: `${business.url}/`,
   telephone: business.phoneDisplay,
   email: business.email,
   address: {
@@ -31,17 +43,42 @@ const localBusinessSchema = {
     addressRegion: business.region,
     addressCountry: business.country,
   },
-  areaServed: [
-    { "@type": "City", name: "Sarasota" },
-    { "@type": "City", name: "Bradenton" },
-  ],
+  areaServed: business.areaServed.map((area) => ({
+    "@type": area.includes("County") ? "AdministrativeArea" : "City",
+    name: area,
+  })),
   founder: {
     "@type": "Person",
     name: business.owner,
     jobTitle: "Tutor / Certified Educator",
   },
-  description,
+  serviceType: business.serviceTypes,
+  description: business.description,
 };
+
+const websiteSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "@id": `${business.url}/#website`,
+  name: business.name,
+  url: `${business.url}/`,
+  publisher: { "@id": `${business.url}/#organization` },
+  inLanguage: "en-US",
+};
+
+const webPageSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "@id": `${canonical}#webpage`,
+  url: canonical,
+  name: title,
+  description,
+  isPartOf: { "@id": `${business.url}/#website` },
+  about: { "@id": `${business.url}/#organization` },
+  inLanguage: "en-US",
+};
+
+const schema = [organizationSchema, websiteSchema, webPageSchema, ...schemaExtras];
 ---
 <!doctype html>
 <html lang="en">
@@ -51,26 +88,27 @@ const localBusinessSchema = {
     <title>{title}</title>
     <meta name="description" content={description} />
     <link rel="canonical" href={canonical} />
+    {noindex && <meta name="robots" content="noindex,follow" />}
 
     <!-- Open Graph -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content={canonical} />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
-    <meta property="og:image" content={new URL(ogImage, Astro.site ?? business.url).toString()} />
+    <meta property="og:image" content={absoluteOgImage} />
     <meta property="og:site_name" content={business.name} />
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
-    <meta name="twitter:image" content={new URL(ogImage, Astro.site ?? business.url).toString()} />
+    <meta name="twitter:image" content={absoluteOgImage} />
 
     <!-- Favicon (placeholder uses logo png; replace with a proper favicon set) -->
     <link rel="icon" href="/assets/character-lemon.svg" type="image/svg+xml" />
 
-    <!-- LocalBusiness schema -->
-    <script type="application/ld+json" set:html={JSON.stringify(localBusinessSchema)} />
+    <!-- Structured data -->
+    <script type="application/ld+json" set:html={JSON.stringify(schema)} />
 
     <meta name="theme-color" content="#FFF8EC" />
   </head>

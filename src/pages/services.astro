@@ -3,8 +3,66 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import Deco from "../components/Deco.astro";
 import JoinTheGarden from "../components/JoinTheGarden.astro";
 
-const title = "Tutoring Services & Pricing — K-6 Reading, Writing & Math | Gifted to Grow Tutoring";
-const description = "1:1, semi-private, and small-group K-6 tutoring in Sarasota & Bradenton. Homeschool partnerships and FL Step Up scholarships accepted. Free 15-minute consultation.";
+const title = "K–6 Reading, Writing & Math Tutoring | Sarasota & Bradenton";
+const description = "Private, semi-private, and small-group K–6 reading, writing, math, and homeschool tutoring for Sarasota and Bradenton families.";
+
+const parentFaqs = [
+  {
+    question: "Do you offer tutoring in Sarasota and Bradenton?",
+    answer:
+      "Yes. Gifted to Grow Tutoring supports K–6 families in Sarasota, Bradenton, and nearby communities, with in-person options and Zoom when appropriate.",
+  },
+  {
+    question: "What grade levels do you tutor?",
+    answer: "Jennifer focuses on K–6 students so tutoring can stay developmentally appropriate for elementary learners.",
+  },
+  {
+    question: "Do you offer reading tutoring?",
+    answer:
+      "Yes. Reading tutoring may include phonics, fluency, vocabulary, comprehension, and confidence-building based on your child’s needs.",
+  },
+  {
+    question: "Do you offer math and writing tutoring?",
+    answer:
+      "Yes. Jennifer supports K–6 math, writing, spelling, sentence and paragraph development, number sense, and problem solving.",
+  },
+  {
+    question: "Do you work with homeschool families?",
+    answer:
+      "Yes. Homeschool support can supplement your curriculum, fill skill gaps, or provide a steady second teacher voice for reading, writing, or math.",
+  },
+  {
+    question: "How is pricing determined?",
+    answer:
+      "Pricing uses a consultative approach. Cost is determined based on consultation, including your child’s needs, format, cadence, and group size.",
+  },
+  {
+    question: "How long are sessions?",
+    answer: "Sessions are 60 minutes.",
+  },
+  {
+    question: "How do parents receive progress updates?",
+    answer:
+      "Parents receive quarterly progress reports, and Jennifer is available for progress updates at a parent’s request.",
+  },
+  {
+    question: "How quickly will I hear back?",
+    answer: "Jennifer will respond within 48 hours.",
+  },
+];
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: parentFaqs.map((faq) => ({
+    "@type": "Question",
+    name: faq.question,
+    acceptedAnswer: {
+      "@type": "Answer",
+      text: faq.answer,
+    },
+  })),
+};
 
 const services = [
   {
@@ -40,7 +98,7 @@ const services = [
   },
 ];
 ---
-<BaseLayout title={title} description={description}>
+<BaseLayout title={title} description={description} extraSchema={faqSchema}>
   <section class="section-cream" style="padding-top:64px;">
     <Deco name="vine" class="scatter" style="bottom:0;right:0;width:50%;opacity:0.45;transform:scaleX(-1);" />
     <div class="shell">
@@ -78,7 +136,6 @@ const services = [
       </p>
     </div>
   </section>
-
   <section class="section-lavender">
     <div class="shell">
       <div class="two-col">
@@ -120,6 +177,33 @@ const services = [
         <li><strong>The first session.</strong> We meet — at your home, my workspace, or on Zoom. The first 10 minutes are about getting comfortable. Then we start with something they already know, so they leave proud.</li>
         <li><strong>Ongoing rhythm.</strong> Most families settle into one or two sessions a week. Parents receive quarterly progress reports, and progress updates are always available at a parent’s request.</li>
       </ol>
+    </div>
+  </section>
+
+  <section class="section-lavender">
+    <div class="shell">
+      <div class="section-head center">
+        <div class="eyebrow-row">
+          <span class="dot"></span>
+          <span class="eyebrow">Parent questions</span>
+        </div>
+        <h2>Quick answers for Sarasota and Bradenton families.</h2>
+        <p class="lead">
+          A simple place to confirm the essentials before you reach out about private tutoring,
+          small-group tutoring, reading, writing, math, or homeschool support.
+        </p>
+      </div>
+
+      <div class="faq-grid" itemscope itemtype="https://schema.org/FAQPage">
+        {parentFaqs.map((faq) => (
+          <article class="card faq-card" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+            <h3 itemprop="name">{faq.question}</h3>
+            <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+              <p itemprop="text">{faq.answer}</p>
+            </div>
+          </article>
+        ))}
+      </div>
     </div>
   </section>
 
