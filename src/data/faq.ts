@@ -12,7 +12,7 @@ export const faq: readonly FaqEntry[] = [
     id: "what-grades",
     question: "What grades do you tutor?",
     answer:
-      "I work with kids in kindergarten through 6th grade — that's where I spent 25 years teaching, and where I know I can help most. I'm planning to expand to middle and high school down the road.",
+      "I work with K–6 students — the elementary years where I spent 25 years teaching and where I know I can help most.",
     aliases: [
       "what ages do you teach",
       "do you tutor elementary",
@@ -73,7 +73,7 @@ export const faq: readonly FaqEntry[] = [
     id: "subjects",
     question: "What subjects do you tutor?",
     answer:
-      "Reading, writing, math, test prep (including FSA), executive function skills, and full homeschool support. I'm Reading Endorsed and ESOL Endorsed, so I'm well-prepared for kids who need extra support with either.",
+      "Reading, writing, math, test readiness, executive function skills, and homeschool support. I'm Reading Endorsed and ESOL Endorsed, so I'm well-prepared for kids who need extra support with language and literacy.",
     aliases: [
       "what do you teach",
       "which subjects",
@@ -84,7 +84,7 @@ export const faq: readonly FaqEntry[] = [
     id: "session-length",
     question: "How long is a session?",
     answer:
-      "Sixty minutes, one-on-one. We start by getting your child comfortable, then work patiently on the thing that's been hard.",
+      "Sessions are 60 minutes. We start by getting your child comfortable, then work patiently on the thing that's been hard.",
     aliases: [
       "how long are sessions",
       "session duration",
@@ -197,12 +197,12 @@ export const faq: readonly FaqEntry[] = [
   },
   {
     id: "fsa-prep",
-    question: "Can you help my child prepare for the FSA?",
+    question: "Can you help my child with test readiness?",
     answer:
-      "Absolutely. I prepare students for Florida state assessments with calm, confidence-building practice — never high-pressure cramming.",
+      "Yes. I support test readiness with calm, confidence-building practice — never high-pressure cramming.",
     aliases: [
-      "fsa prep",
-      "florida state assessment",
+      "state assessment prep",
+      "florida assessment",
       "test prep",
       "standardized test help",
     ],
@@ -261,7 +261,7 @@ export const faq: readonly FaqEntry[] = [
     id: "ages-not-tutored",
     question: "What ages do you NOT tutor?",
     answer:
-      "Right now I'm focused on K–6. I may expand to older grades in the future, but I want to do K–6 really well first.",
+      "Right now I'm focused on K–6 so I can serve elementary learners really well.",
     aliases: [
       "do you tutor high school",
       "do you tutor teenagers",
