@@ -38,5 +38,5 @@ Then act as an expert designer. Output HTML artifacts that **copy from `assets/`
 
 - Phone: **(941) 586-8421**
 - Email: **jennifer@giftedtogrowtutoring.com**
-- Area: Sarasota / Bradenton, FL (in-person + Zoom)
+- Area: Sarasota / Bradenton, FL (in-person only at this time)
 - Credentials: Certified PreK-6 · Reading Endorsed · ESOL Endorsed · FL Step Up for Students Provider · 25 years experience

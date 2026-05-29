@@ -11,7 +11,7 @@ function Footer() {
             </div>
             <p style={{ margin: 0, maxWidth: "32em" }}>
               K–6 reading, writing &amp; math tutoring with Jennifer Pollard.
-              Serving families in Sarasota and Bradenton, Florida, in person and on Zoom.
+              Serving families in Sarasota and Bradenton, Florida, with in-person tutoring only at this time.
             </p>
             <div style={{ marginTop: 16, display: "flex", alignItems: "center", gap: 8 }}>
               <span style={{ width: 8, height: 8, borderRadius: "50%", background: "var(--green)" }}></span>

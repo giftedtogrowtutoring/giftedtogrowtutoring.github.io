@@ -36,7 +36,7 @@ export const business = {
   hours: "After-school 3-7pm Mon-Thu; Daytime Mon/Tue/Thu",
   grades: "K-6",
   stepUpProvider: true,
-  modes: ["in-home", "library", "online (Zoom)"],
+  modes: ["in-home", "workspace"],
 };
 
 export const navLinks = [

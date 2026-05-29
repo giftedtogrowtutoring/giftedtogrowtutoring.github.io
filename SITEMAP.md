@@ -161,7 +161,7 @@ Each card has: name, who it's for, what's included, format, consultative pricing
 - **Summer Programs** — Coming summer 2026
 
 **3. How Sessions Work**
-- Where: in-home, library, or online
+- Where: in-home or workspace
 - Hours: After-school 3–7pm Mon–Thu · Daytime Mon/Tue/Thu
 - What to expect in a first session
 - Materials and homework
@@ -215,7 +215,7 @@ Submit button text: **"Send Jennifer a Note"** (never "Submit")
 **3. Alternative Contact Methods**
 - Email: jennifer@giftedtogrowtutoring.com
 - Phone: (941) 586-8421
-- Service area: Sarasota / Bradenton + online anywhere in Florida
+- Service area: Sarasota / Bradenton for in-person tutoring
 
 **4. After Submission**
 Friendly thank-you page: *"Your note is on its way to Jennifer. She'll respond within one business day. In the meantime, here's a verse she returns to often: 'Now to him who is able to do immeasurably more than all we ask or imagine...' — Ephesians 3:20"*
