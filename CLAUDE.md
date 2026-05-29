@@ -32,7 +32,7 @@ The Astro site is **scaffolded, built, and deployed**. The remaining work is mos
 ### Outstanding follow-ups (5)
 1. **Web3Forms access key.** `src/pages/contact.astro` has a `{{ NEEDS REVIEW }}` placeholder. Until it's replaced, the form falls back to a polite "please email Jennifer directly" message. Register at https://web3forms.com (free), paste the key, commit, push — workflow redeploys automatically.
 2. **Real photo of Jennifer.** Placeholders flagged with `data-placeholder` and a visible `NEEDS REVIEW` chip live in `src/components/AboutTeaser.astro` and `src/pages/about.astro`. Drop the image(s) into `public/assets/` and swap the placeholder block for an `<Image>`.
-3. **Pricing confirmation.** Ranges in `src/pages/services.astro` ($60–75 / $45–55 / $35–45) are educated guesses pulled from this brief — confirm with Jennifer before the site is announced. Flagged inline with `NEEDS REVIEW`.
+3. **Consultative pricing.** `src/pages/services.astro` should not publish specific tutoring rates. Use consultative language and explain that cost is determined after talking through the child’s needs.
 4. **Custom-domain DNS.** GitHub Pages source needs to be set to **GitHub Actions** in repo Settings → Pages, custom domain `giftedtogrowtutoring.com` entered, **Enforce HTTPS** ticked after cert provisions. At the registrar: 4 apex A records (`185.199.108.153`, `.109`, `.110`, `.111`) and a `www` CNAME to `giftedtogrowtutoring.github.io`. The `public/CNAME` file is already committed.
 5. **Analytics decision.** Nothing is wired up yet. CLAUDE.md §2 lists Plausible (privacy-first) and GA4 as the candidates — confirm Jennifer's preference, then add the snippet to `src/layouts/BaseLayout.astro`.
 
@@ -136,11 +136,11 @@ Footer should appear on every page with: contact info, FL Step Up Provider badge
 
 ## 7. Pricing
 
-Show ranges, not exact rates. Suggested structure:
+Do not show specific rates. Suggested structure:
 
-- 1:1 Private Tutoring — $60–$75/session
-- 2:1 Semi-Private — $45–$55/student/session
-- Small Group (3-4 students) — $35–$45/student/session
+- 1:1 Private Tutoring — Consultative approach; cost determined by consultation
+- 2:1 Semi-Private — Consultative approach; cost determined by consultation
+- Small Group (3-4 students) — Consultative approach; cost determined by consultation
 - Homeschool Partnership — Inquire
 - FL Step Up Scholarship — Accepted, no out-of-pocket for qualifying families
 
