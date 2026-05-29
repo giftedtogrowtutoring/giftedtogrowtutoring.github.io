@@ -208,6 +208,22 @@ export const faq: readonly FaqEntry[] = [
     ],
   },
   {
+    id: "parent-progress-updates",
+    question: "How do parents receive progress updates?",
+    answer:
+      "Parents receive a quarterly progress report with a summary of their child’s growth, goals, and next steps. I’m also always available for progress updates at a parent’s request.",
+    aliases: [
+      "progress update",
+      "progress updates",
+      "progress report",
+      "quarterly progress report",
+      "parent updates",
+      "how will i know my child is growing",
+      "how do you communicate with parents",
+      "parent communication",
+    ],
+  },
+  {
     id: "response-time",
     question: "How quickly will you respond if I reach out?",
     answer:
