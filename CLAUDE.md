@@ -128,7 +128,7 @@ Footer should appear on every page with: contact info, FL Step Up Provider badge
 - Serves grades K-6 (mentioned PreK-6 in some materials, K-8 in others — default to K-6 to match her current logo; mention expansion plans separately)
 - Available hours: After-school 3-7pm Mon-Thu; Daytime Mon/Tue/Thu
 - Works with students who have IEPs and 504 plans
-- Tutoring locations: in-home, library, online
+- Tutoring locations: in-home, workspace
 
 **Two real testimonials are on file** (Beatriz Tremols re: Penelope & Lucas; Theresa Giuliani re: her daughter). More are expected. Design the testimonial component to scale.
 

@@ -24,7 +24,7 @@ export const faq: readonly FaqEntry[] = [
     id: "location",
     question: "Where are you located?",
     answer:
-      "I serve families in Sarasota and Bradenton, Florida. I tutor in your home, at the library, or online — whichever works best for your family.",
+      "I serve families in Sarasota and Bradenton, Florida. Sessions are currently offered in person, in your home or in my workspace.",
     aliases: [
       "where do you tutor",
       "do you come to my house",
@@ -138,15 +138,15 @@ export const faq: readonly FaqEntry[] = [
     ],
   },
   {
-    id: "online",
-    question: "Do you offer online tutoring?",
+    id: "in-person-only",
+    question: "Are sessions in person?",
     answer:
-      "Yes, I tutor over Zoom for families who prefer it or who live a bit farther out.",
+      "Yes. Tutoring is currently offered in person only, either in your home in Sarasota or Bradenton or in my workspace.",
     aliases: [
-      "do you tutor online",
-      "virtual tutoring",
-      "zoom tutoring",
-      "remote tutoring",
+      "where do sessions happen",
+      "can we meet at your workspace",
+      "can you come to my home",
+      "distance tutoring",
     ],
   },
   {
