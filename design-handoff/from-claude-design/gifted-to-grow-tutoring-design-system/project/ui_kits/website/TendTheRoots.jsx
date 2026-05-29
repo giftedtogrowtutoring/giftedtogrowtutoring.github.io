@@ -40,7 +40,7 @@ function TendTheRoots({ audience }) {
           </div>
           <h2 className="h1">What a session looks like.</h2>
           <p className="lead">
-            Fifty minutes, one-on-one. In your home in Sarasota or Bradenton, in my workspace,
+            Sixty minutes, one-on-one. In your home in Sarasota or Bradenton, in my workspace,
             or over Zoom. We start by getting your child comfortable.
             Then we work — patiently — on the thing that's been hard.
           </p>
