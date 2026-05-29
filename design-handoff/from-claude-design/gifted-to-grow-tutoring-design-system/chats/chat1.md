@@ -527,7 +527,7 @@ A faith-rooted tutoring website for Jennifer Pollard's "Gifted to Grow Tutoring"
 
 3. ABOUT STRIP — "Meet Jennifer" with a placeholder for her photo, brief intro about being one teacher with 25 years experience, and her credentials as icon chips: Certified PreK-6, Reading Endorsed, ESOL Endorsed, FL Step Up Provider.
 
-4. SERVICES PREVIEW — three columns titled "Tend the Roots": 1:1 Private Tutoring ($60-75/session), Small Group (from $35/student), Homeschool Support (inquire).
+4. SERVICES PREVIEW — three columns titled "Tend the Roots": 1:1 Private Tutoring (consultative approach), Small Group (cost determined by consultation), Homeschool Support (inquire).
 
 5. TESTIMONIALS — section titled "Bear Fruit" with the two real testimonials from Beatriz Tremols (about Penelope and Lucas) and Theresa Giuliani (about her daughter).
 

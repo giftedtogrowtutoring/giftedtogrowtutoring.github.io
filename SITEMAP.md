@@ -50,8 +50,8 @@ Each card: short description + "Learn how →" link to the relevant section of /
 
 **4. Services Preview — "Tend the Roots"**
 Three columns:
-- **1:1 Private Tutoring** — Most flexible, fully tailored. $60–$75/session
-- **Small Group** — 2–4 students, lower cost, social learning. From $35/session/student
+- **1:1 Private Tutoring** — Most flexible, fully tailored. Consultative approach.
+- **Small Group** — 2–4 students, shared format, social learning. Cost determined by consultation.
 - **Homeschool Support** — Curriculum partnership, ongoing. Inquire
 Link: "See all services →" → /services
 
@@ -143,7 +143,7 @@ Pulled directly from Jennifer's own materials:
 
 ## 4. Services — `/services`
 
-**Goal:** Make pricing and format clear. Filter the wrong-fit inquiries before they reach Jennifer.
+**Goal:** Make the consultative pricing approach and available formats clear. Filter the wrong-fit inquiries before they reach Jennifer.
 
 **1. Hero**
 - Headline: *"Find the right fit for your family."*
@@ -151,11 +151,11 @@ Pulled directly from Jennifer's own materials:
 
 **2. Service Cards** (one per offering)
 
-Each card has: name, who it's for, what's included, format, pricing, and a "This is right for us" mini-CTA.
+Each card has: name, who it's for, what's included, format, consultative pricing language, and a "This is right for us" mini-CTA.
 
-- **1:1 Private Tutoring** — $60–$75/session
-- **2:1 Semi-Private** — $45–$55/student/session
-- **Small Group (3–4 students)** — $35–$45/student/session
+- **1:1 Private Tutoring** — Consultative approach; cost determined by consultation
+- **2:1 Semi-Private** — Consultative approach; cost determined by consultation
+- **Small Group (3–4 students)** — Consultative approach; cost determined by consultation
 - **Homeschool Partnership** — Inquire for custom
 - **FL Step Up Scholarship** — Accepted; no out-of-pocket for qualifying families
 - **Summer Programs** — Coming summer 2026
@@ -231,7 +231,7 @@ When building in Claude Code, build pages in this order:
 3. **Contact page** — the primary CTA, needs to work perfectly
 4. **About page** — second-most-visited page
 5. **Approach page** — the differentiator
-6. **Services page** — pricing requires accuracy
+6. **Services page** — consultative pricing language requires accuracy
 7. **Testimonials page** — simplest, do it last
 
 Each page commits separately. No global refactors mid-build.

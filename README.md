@@ -73,7 +73,7 @@ Search the codebase for `NEEDS REVIEW` to find these in context.
 
 1. **Web3Forms access key** — register at <https://web3forms.com> and replace the placeholder in `src/pages/contact.astro` so the form actually delivers email.
 2. **Real photos of Jennifer** — replace placeholders in `src/components/AboutTeaser.astro` and `src/pages/about.astro` (look for `data-placeholder`).
-3. **Exact pricing** — confirm `$60–$75 / $45–$55 / $35–$45` ranges in `src/pages/services.astro` are correct.
+3. **Consultative pricing** — keep `src/pages/services.astro` focused on a consultative approach; do not publish specific tutoring rates.
 4. **More testimonials** — drop new ones into `src/data/testimonials.ts` as families send them.
 5. **GA4 / Plausible** — analytics is intentionally not wired up; confirm preference and add to `BaseLayout.astro`.
 6. **OG image** — currently falls back to the logo PNG. A purpose-made share image would be better.
