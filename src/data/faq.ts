@@ -6,7 +6,7 @@ export interface FaqEntry {
 }
 
 // Array order is meaningful: the first 5 entries surface as suggested-question
-// pills in the chat opening (grades, location, cost, Step Up, getting started).
+// pills in the chat opening (grades, location, consultative approach, Step Up, getting started).
 export const faq: readonly FaqEntry[] = [
   {
     id: "what-grades",
@@ -34,10 +34,11 @@ export const faq: readonly FaqEntry[] = [
   },
   {
     id: "pricing",
-    question: "How much does tutoring cost?",
+    question: "Consultative approach",
     answer:
-      "1:1 sessions are $60–$75, 2:1 semi-private is $45–$55 per student, and small groups of 3–4 students are $35–$45 per student. Homeschool partnerships are quote-based — let's talk about what you need.",
+      "Gifted to Grow uses a consultative approach because every child’s needs are different. Cost is determined after we talk through your child’s goals, learning needs, schedule, and best tutoring format.",
     aliases: [
+      "how much does tutoring cost",
       "what are your rates",
       "how much per hour",
       "tutoring price",
@@ -232,7 +233,7 @@ export const faq: readonly FaqEntry[] = [
     id: "group-tutoring",
     question: "Do you tutor groups of friends together?",
     answer:
-      "Yes — semi-private (2 students) and small groups (3–4 students) are both options, and they come at a lower per-student rate. Just reach out and we'll figure out the right setup.",
+      "Yes — semi-private (2 students) and small groups (3–4 students) are both options. We’ll use a consultative approach to talk through each student’s needs, the best format, and the cost after consultation.",
     aliases: [
       "group tutoring",
       "tutor with friends",
