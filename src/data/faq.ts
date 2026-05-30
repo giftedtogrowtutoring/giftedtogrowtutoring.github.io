@@ -84,7 +84,7 @@ export const faq: readonly FaqEntry[] = [
     id: "session-length",
     question: "How long is a session?",
     answer:
-      "Sessions are 60 minutes. We start by getting your child comfortable, then work patiently on the thing that's been hard.",
+      "Both 60-minute and 30-minute sessions are available. We start by getting your child comfortable, then work patiently on the thing that's been hard.",
     aliases: [
       "how long are sessions",
       "session duration",
