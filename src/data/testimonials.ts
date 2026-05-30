@@ -28,10 +28,10 @@ export const testimonials: Testimonial[] = [
   },
   {
     body:
-      "After our 3rd-grade son scored a Level 2 on his first FAST test, we worked with Mrs. Pollard throughout the school year. By the end of the year, he achieved a Level 5 on the FAST assessment, earned straight A’s, and grew in confidence along the way.",
+      "After our 3rd-grade son scored a Level 2 on his first FAST test, we worked with Ms. Pollard throughout the school year. By the end of the year, he achieved a Level 5 on the FAST assessment, earned straight A’s, and grew in confidence along the way.",
     sig: "— Tara Goettel",
     meta: "Parent of a 3rd-grade student",
     full:
-      "After our 3rd-grade son scored a Level 2 on his first FAST test, we were referred to Mrs. Pollard’s tutoring services. We worked with her throughout the school year, and by the end of the year he achieved a Level 5 on the FAST assessment and earned straight A’s.\n\nMrs. Pollard was amazing. She tailored each session to his individual challenges and learning needs, communicated regularly, and helped build his confidence along the way. He truly enjoyed working with her. We highly recommend her to any family looking for a caring and effective tutor!",
+      "After our 3rd-grade son scored a Level 2 on his first FAST test, we were referred to Ms. Pollard’s tutoring services. We worked with her throughout the school year, and by the end of the year he achieved a Level 5 on the FAST assessment and earned straight A’s.\n\nMs. Pollard was amazing. She tailored each session to his individual challenges and learning needs, communicated regularly, and helped build his confidence along the way. He truly enjoyed working with her. We highly recommend her to any family looking for a caring and effective tutor!",
   },
 ];
