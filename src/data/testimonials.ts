@@ -34,4 +34,11 @@ export const testimonials: Testimonial[] = [
     full:
       "After our 3rd-grade son scored a Level 2 on his first FAST test, we were referred to Ms. Pollard’s tutoring services. We worked with her throughout the school year, and by the end of the year he achieved a Level 5 on the FAST assessment and earned straight A’s.\n\nMs. Pollard was amazing. She tailored each session to his individual challenges and learning needs, communicated regularly, and helped build his confidence along the way. He truly enjoyed working with her. We highly recommend her to any family looking for a caring and effective tutor!",
   },
+
+  {
+    body:
+      "I cannot say enough wonderful things about the exceptional tutoring my daughter received this past year from Ms. Pollard. She created a supportive and encouraging environment that helped build both my daughter’s academic skills and confidence. Her ability to connect with students, tailor lessons to individual needs, and clearly explain challenging concepts made a meaningful difference.\n\nOne thing we are especially grateful for is that Ms. Pollard recognized my daughter’s strong comprehension skills while also identifying that she needed additional support with foundational reading skills and fluency. She encouraged us to pursue further evaluation and school support, which ultimately helped my daughter receive the accommodations she needed. Those supports have made a lasting difference and will continue to benefit her throughout her school career.\n\nWhat truly sets Ms. Pollard apart is her dedication and passion for teaching. She not only strengthens academic performance but also fosters independence, resilience, and a positive attitude toward learning. She is patient, attentive, highly knowledgeable, and genuinely committed to student success. We are incredibly grateful for the lasting impact she has had on our daughter’s growth.",
+    sig: "— Kristina Kipp",
+    meta: "Mom of a 3rd Grader",
+  },
 ];
