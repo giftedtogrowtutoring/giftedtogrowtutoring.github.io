@@ -859,3 +859,94 @@ i[data-lucide] { stroke-width: 2; }
   .feature-card-grid { grid-template-columns: 1fr; }
   .check-card { padding: 18px; }
 }
+
+/* Homeschool support page */
+.homeschool-service-grid,
+.feature-card-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+}
+.feature-card-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.homeschool-card ul,
+.portfolio-feature ul {
+  margin: 4px 0 0;
+  padding-left: 20px;
+  color: var(--ink);
+  line-height: 1.6;
+}
+.pricing-note {
+  background: var(--cream-deep);
+  border: 1.5px dashed var(--sage);
+  border-radius: 16px;
+  color: var(--plum) !important;
+  padding: 12px 14px;
+}
+.service-inquiry { margin-top: auto; align-self: flex-start; }
+.portfolio-feature {
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: 36px;
+  padding: 36px;
+}
+.check-card-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+.check-card-grid.compact { grid-template-columns: 1fr; }
+.check-card {
+  align-items: flex-start;
+  background: var(--cream);
+  border: 1.5px solid var(--border-soft);
+  border-radius: 16px;
+  display: flex;
+  gap: 10px;
+  padding: 14px;
+}
+.check-card p { margin: 0; color: var(--ink); }
+.check-icon {
+  align-items: center;
+  background: var(--green);
+  border-radius: 999px;
+  color: var(--cream);
+  display: inline-flex;
+  flex: 0 0 24px;
+  font-weight: 800;
+  height: 24px;
+  justify-content: center;
+  width: 24px;
+}
+.portfolio-reassurance { font-size: 1.45rem; margin: 22px 0 0; text-align: center; }
+.homeschool-form { padding: 32px; }
+.homeschool-form h3 { margin-top: 28px; }
+.homeschool-form h3:first-of-type { margin-top: 0; }
+.homeschool-form fieldset.field {
+  border: 0;
+  margin: 0 0 16px;
+  padding: 0;
+}
+.homeschool-form legend {
+  color: var(--plum);
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  padding: 0;
+}
+.homeschool-form label span,
+.helper { color: var(--ink-soft); font-size: 0.875rem; font-weight: 400; }
+.conditional-field[hidden] { display: none !important; }
+.form-status { color: var(--plum); font-weight: 700; margin: 12px 0; min-height: 1.4em; }
+#homeschoolSubmit { justify-content: center; margin-top: 8px; width: 100%; }
+#homeschoolSubmit:disabled { cursor: wait; opacity: 0.72; }
+@media (max-width: 900px) {
+  .homeschool-service-grid,
+  .feature-card-grid,
+  .portfolio-feature { grid-template-columns: 1fr; }
+}
+@media (max-width: 560px) {
+  .homeschool-form,
+  .portfolio-feature { padding: 24px; }
+  .check-card-grid { grid-template-columns: 1fr; }
+}

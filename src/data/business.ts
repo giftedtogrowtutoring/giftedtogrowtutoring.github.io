@@ -44,7 +44,7 @@ export const business = {
 export const navLinks = [
   { href: "/approach/", label: "Philosophy" },
   { href: "/services/", label: "What we do" },
-  { href: "/florida-homeschool-portfolio-evaluations/", label: "Evaluations" },
+  { href: "/homeschool-support/", label: "Homeschool Support" },
   { href: "/testimonials/", label: "Stories" },
   { href: "/about/", label: "About Jennifer" },
 ];
