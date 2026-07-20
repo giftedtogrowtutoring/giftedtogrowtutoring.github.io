@@ -72,13 +72,14 @@ export const faq: readonly FaqEntry[] = [
 
   {
     id: "tutoring-student-intake",
-    question: "Where is the Tutoring Student Intake Form?",
+    question: "Where is the New Tutoring Student Welcome & Partnership Form?",
     answer:
-      "The Tutoring Student Intake Form is for families whose child has already been accepted and placed on Jennifer’s tutoring schedule. If your child is already scheduled, use that form to share detailed information before the first session. If you are still interested in asking about tutoring availability, please contact Jennifer first.",
+      "The New Tutoring Student Welcome & Partnership Form is only for students who have already been accepted and scheduled for tutoring. It takes about 10 minutes and asks about the child’s strengths, needs, goals, interests, learning preferences, and anything the parent wants Jennifer to know. It also includes the Tutoring Partnership Agreement and rolling 90-day cancellation policy. New tutoring leads should contact Jennifer before completing this form; homeschool consulting and portfolio evaluations use separate forms.",
     aliases: [
       "student intake form",
       "tutoring intake form",
-      "established tutoring student intake",
+      "partnership form",
+      "cancellation policy form",
       "new tutoring families",
       "complete student intake",
       "accepted and scheduled",
@@ -88,7 +89,7 @@ export const faq: readonly FaqEntry[] = [
     id: "established-tutoring-family",
     question: "My child is already accepted and scheduled. What should I complete?",
     answer:
-      "Since your child is already accepted and scheduled for tutoring, please complete the Established Tutoring Student Intake Form before the first session. It asks about your child’s strengths, academic needs, learning style, school performance, tutoring goals, and the schedule previously confirmed with Jennifer. Homeschool consulting and portfolio evaluations use separate forms.",
+      "Since your child has already been accepted and scheduled, please complete the New Tutoring Student Welcome & Partnership Form before the first session. It takes about 10 minutes and gives you an opportunity to share your child’s strengths, needs, goals, interests, learning style, and anything else you would like Jennifer to know.",
     aliases: [
       "already scheduled for tutoring",
       "already accepted for tutoring",
@@ -96,6 +97,40 @@ export const faq: readonly FaqEntry[] = [
       "scheduled with jennifer",
       "onboarding form",
     ],
+  },
+  {
+    id: "new-tutoring-lead-routing",
+    question: "Should I complete the tutoring intake form if I am asking about availability?",
+    answer:
+      "The tutoring intake and partnership form is only for students who have already been accepted and scheduled. If you are still asking about tutoring availability, please contact Jennifer first.",
+    aliases: [
+      "asking about tutoring availability",
+      "new tutoring lead",
+      "can i fill out intake before accepted",
+      "not scheduled yet",
+      "availability request",
+    ],
+  },
+  {
+    id: "tutoring-partnership-agreement",
+    question: "What is the tutoring partnership agreement?",
+    answer:
+      "Gifted To Grow Tutoring approaches tutoring as a partnership among Jennifer, the parent or guardian, the student, and, when appropriate, the classroom teacher. Instruction is tailored to the child’s individual strengths, needs, gifts, abilities, and learning style.",
+    aliases: ["partnership agreement", "tutoring agreement", "parent agreement", "educational team"],
+  },
+  {
+    id: "cancellation-policy",
+    question: "What is the cancellation policy?",
+    answer:
+      "Families may cancel without a fee when they provide more than 24 hours’ notice and contact Jennifer directly. Cancellations or rescheduling requests made within 24 hours are charged at 50%. If three cancellations or rescheduling requests occur within any rolling 90-day period, the third occurrence is charged at 100%. Illnesses and family emergencies may be discussed directly with Jennifer and reviewed individually.",
+    aliases: ["cancel session", "reschedule", "rolling 90 day", "no show", "cancellation fee"],
+  },
+  {
+    id: "specific-cancellation-fee-review",
+    question: "Will I be charged a cancellation fee for my situation?",
+    answer:
+      "Jennifer will need to review the specific circumstances with you directly. Please contact her as soon as possible so you can discuss the situation together.",
+    aliases: ["will i be charged", "waive fee", "emergency exception", "calculate cancellations", "do i owe"],
   },
 
   {
