@@ -98,6 +98,7 @@ const WEB3FORMS_ACCESS_KEY = "040e27de-957a-4362-9f43-a0dcc796dec9";
                 <label class="checkbox-row"><input type="checkbox" name="help[]" value="Math" /> Math</label>
                 <label class="checkbox-row"><input type="checkbox" name="help[]" value="Test prep" /> Test prep</label>
                 <label class="checkbox-row"><input type="checkbox" name="help[]" value="Homeschool support" /> Homeschool support</label>
+                <label class="checkbox-row"><input type="checkbox" name="help[]" value="Florida Homeschool Portfolio Evaluation" data-service-option="Florida Homeschool Portfolio Evaluation" /> Homeschool portfolio evaluation</label>
                 <label class="checkbox-row"><input type="checkbox" name="help[]" value="Executive function" /> Executive function</label>
                 <label class="checkbox-row"><input type="checkbox" name="help[]" value="Not sure yet" /> Not sure yet</label>
               </div>
@@ -144,5 +145,19 @@ const WEB3FORMS_ACCESS_KEY = "040e27de-957a-4362-9f43-a0dcc796dec9";
       </p>
     </div>
   </section>
+
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const requestedService = params.get("service");
+    if (requestedService === "Florida Homeschool Portfolio Evaluation") {
+      const serviceOption = document.querySelector('[data-service-option="Florida Homeschool Portfolio Evaluation"]');
+      const message = document.getElementById("message");
+      if (serviceOption instanceof HTMLInputElement) serviceOption.checked = true;
+      if (message instanceof HTMLTextAreaElement && !message.value) {
+        message.value = "I would like to schedule a Florida Homeschool Portfolio Evaluation.";
+      }
+    }
+  </script>
 
 </BaseLayout>
