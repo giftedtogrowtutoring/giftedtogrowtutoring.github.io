@@ -963,3 +963,35 @@ i[data-lucide] { stroke-width: 2; }
 .form-status { color: var(--plum); font-weight: 700; margin: 8px 0; }
 .intake-subsection { border-left: 4px solid var(--border-soft); padding: 20px; margin: 28px 0; background: rgba(255, 248, 236, 0.6); border-radius: 16px; }
 .intake-subsection.is-highlighted { border-left-color: var(--orange); background: var(--cream-deep); }
+
+/* New Tutoring Student Welcome & Partnership Form */
+.intake-page .display { text-align: center; }
+.intake-page .eyebrow-row { justify-content: center; }
+.completion-time { display: inline-flex; padding: 8px 14px; border-radius: var(--r-pill); background: var(--lemon); color: var(--plum); }
+.notice-box, .example-box { background: var(--cream-deep); border: 2px solid var(--lemon-deep); border-radius: var(--r); padding: 16px 18px; }
+.example-box { border-color: var(--sage); }
+.form-card { border-top: 4px solid var(--lemon); margin: 28px 0; padding: 24px; background: rgba(255, 248, 236, 0.72); border-radius: var(--r-lg); box-shadow: var(--shadow-sm); }
+.form-card h2 { text-align: center; margin-top: 0; color: var(--plum); }
+.form-card h3 { color: var(--plum); margin-top: 24px; }
+.form-card p { max-width: 62ch; }
+.agreement-card, .policy-section { line-height: 1.7; }
+.policy-section { margin-top: 32px; padding-top: 24px; border-top: 2px dotted var(--sage); }
+.check-list { display: grid; gap: 10px; padding: 0; margin: 16px 0 24px; list-style: none; }
+.check-list li { position: relative; padding-left: 32px; }
+.check-list li::before { content: "✓"; position: absolute; left: 0; top: 0; width: 22px; height: 22px; display: inline-grid; place-items: center; border-radius: 50%; background: var(--lemon); color: var(--plum); font-weight: 900; line-height: 1; }
+.summary-card { background: var(--lavender); border-top-color: var(--plum); }
+.signature-card { border-top-color: var(--orange); }
+.main-open-response { padding: 18px; border: 2px solid var(--lemon-deep); border-radius: var(--r); background: var(--cream-deep); }
+.intake-form textarea { min-height: 92px; }
+.main-open-response textarea { min-height: 136px; }
+.conditional { display: none; }
+.conditional.is-visible { display: flex; }
+.field-error { color: var(--error); font-weight: 700; margin: 4px 0 0; font-size: 0.9rem; }
+.intake-form .checkbox-row { align-items: flex-start; min-height: 32px; }
+.intake-form .checkbox-row input { flex: 0 0 auto; margin-top: 3px; }
+#studentIntakeSubmit { width: 100%; justify-content: center; margin-top: 8px; }
+#studentIntakeSubmit[disabled] { opacity: 0.72; cursor: not-allowed; }
+@media (max-width: 640px) {
+  .form-card { padding: 18px; }
+  .intake-notice, .intake-form { padding: 20px; }
+}

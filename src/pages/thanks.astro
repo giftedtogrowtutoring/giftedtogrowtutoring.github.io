@@ -18,9 +18,9 @@ const isTutoringIntake = Astro.url.searchParams.get("form") === "tutoring-studen
         <span class="dot"></span>
         <span class="eyebrow">{isTutoringIntake ? "Student intake received" : "Got your note"}</span>
       </div>
-      <h1 class="display" style="margin-top:8px;">{isTutoringIntake ? "Thank you for completing your child’s tutoring intake form." : "Thank you. I have your note."}</h1>
+      <h1 class="display" style="margin-top:8px;">{isTutoringIntake ? "Thank you for completing your child’s tutoring intake and partnership agreement." : "Thank you. I have your note."}</h1>
       {isTutoringIntake ? (
-        <p class="lead">Jennifer will review the information before your child’s first scheduled session.</p>
+        <p class="lead">Jennifer will review the information before your child’s first scheduled session. I am grateful for the opportunity to partner with your family and support your child’s growth.</p>
       ) : (
         <p class="lead">
           I'll read it carefully and write back within 48 hours.
