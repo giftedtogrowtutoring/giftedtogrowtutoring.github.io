@@ -1,134 +1,17 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-import Deco from "../components/Deco.astro";
-import JoinTheGarden from "../components/JoinTheGarden.astro";
 
 const title = "Florida Homeschool Portfolio Evaluations | Gifted To Grow Tutoring";
-const description = "Schedule an in-person Florida homeschool portfolio evaluation with a Florida-certified teacher serving homeschool families in the Bradenton and Sarasota area. Evaluations are $50 per student.";
-
-const bringItems = [
-  "Samples of your child's work from throughout the year",
-  "Reading list or books completed",
-  "Writing samples",
-  "Math work",
-  "Projects, artwork, or science activities, if applicable",
-  "Photos of field trips or hands-on learning experiences, optional",
-];
-
-const reasons = [
-  {
-    title: "Florida-certified teacher",
-    icon: `<svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 15l3.5 2 1-3.9 3-2.6-4-.3L12 6.5 8.5 10.2l-4 .3 3 2.6 1 3.9z"/><path d="M8 21l4-2 4 2v-5.5"/></svg>`,
-  },
-  {
-    title: "Experienced educator",
-    icon: `<svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>`,
-  },
-  {
-    title: "Personalized one-on-one evaluations",
-    icon: `<svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21a8 8 0 0 0-16 0"/><circle cx="12" cy="7" r="4"/></svg>`,
-  },
-  {
-    title: "Supportive and family-friendly atmosphere",
-    icon: `<svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 14c1.5-1.5 3-3.2 3-5.5A5.5 5.5 0 0 0 12 5a5.5 5.5 0 0 0-10 3.5c0 2.3 1.5 4 3 5.5l7 7z"/></svg>`,
-  },
-  {
-    title: "Convenient appointment scheduling",
-    icon: `<svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4"/><path d="M8 2v4"/><path d="M3 10h18"/><path d="m9 16 2 2 4-4"/></svg>`,
-  },
-];
-
-const serviceSchema = {
-  "@context": "https://schema.org",
-  "@type": "Service",
-  name: "Florida Homeschool Portfolio Evaluations",
-  description,
-  provider: {
-    "@type": "EducationalOrganization",
-    name: "Gifted to Grow Tutoring",
-  },
-  areaServed: ["Bradenton", "Sarasota"],
-  offers: {
-    "@type": "Offer",
-    name: "Annual Portfolio Evaluation",
-    price: "50",
-    priceCurrency: "USD",
-  },
-};
+const description = "In-person Florida homeschool portfolio evaluations are now part of Gifted To Grow Tutoring's Homeschool Support Services for Bradenton and Sarasota families.";
 ---
-<BaseLayout title={title} description={description} extraSchema={serviceSchema}>
-  <section class="section-cream homeschool-hero" style="padding-top:64px;">
-    <Deco name="vine" class="scatter" style="bottom:0;right:0;width:50%;opacity:0.42;transform:scaleX(-1);" />
-    <Deco name="book" class="scatter" style="top:48px;right:8%;width:74px;transform:rotate(12deg);" />
-    <div class="shell">
-      <div class="eyebrow-row">
-        <span class="dot"></span>
-        <span class="eyebrow">Homeschool support</span>
-      </div>
-      <h1 class="display" style="max-width:16ch;">Florida Homeschool Portfolio Evaluations</h1>
-      <p class="lead" style="max-width:34em;"><strong>Annual Homeschool Evaluations for Florida Families</strong></p>
-      <p class="lead" style="max-width:42em;">
-        As a Florida-certified teacher and owner of Gifted To Grow Tutoring, I provide professional annual homeschool portfolio evaluations in a relaxed, encouraging environment. My goal is to make this required step simple, stress-free, and even enjoyable for your family.
-      </p>
-      <a class="btn btn-primary" href="/contact/?service=Florida%20Homeschool%20Portfolio%20Evaluation#contactForm">Schedule My Evaluation</a>
+<BaseLayout title={title} description={description} noindex={true}>
+  <section class="section-cream" style="padding-top:64px;">
+    <div class="shell shell-narrow" style="text-align:center;">
+      <div class="eyebrow-row" style="justify-content:center;"><span class="dot"></span><span class="eyebrow">Homeschool support</span></div>
+      <h1>Florida Homeschool Portfolio Evaluations</h1>
+      <p class="lead">Portfolio evaluations are now included on the Homeschool Support Services page.</p>
+      <p>Evaluations are held in person by appointment in the Bradenton/Sarasota area. Portfolio evaluation pricing is provided on a consultative basis.</p>
+      <a class="btn btn-primary" href="/homeschool-support/?service=Florida%20Homeschool%20Portfolio%20Evaluation#homeschool-intake">Request a Portfolio Evaluation</a>
     </div>
   </section>
-
-  <section class="section-lavender">
-    <div class="shell two-col" style="align-items:start;">
-      <article class="card">
-        <h2>What to Expect</h2>
-        <p>During our in-person meeting, we'll review your child's homeschool portfolio, discuss the learning and growth that has taken place throughout the year, and celebrate their accomplishments.</p>
-        <p>Once the evaluation is complete, I'll provide you with a signed evaluation letter for submission to your Florida school district.</p>
-      </article>
-      <aside class="price feature homeschool-price" aria-labelledby="portfolio-price">
-        <h2 id="portfolio-price">Pricing</h2>
-        <h3>Annual Portfolio Evaluation</h3>
-        <div class="rate">$50 per student</div>
-        <p>Discounts available for families with multiple children.</p>
-      </aside>
-    </div>
-  </section>
-
-  <section class="section-cream">
-    <div class="shell">
-      <div class="section-head center">
-        <h2>Please Bring</h2>
-      </div>
-      <div class="check-card-grid">
-        {bringItems.map((item) => (
-          <article class="check-card">
-            <span class="check-icon" aria-hidden="true">✓</span>
-            <p>{item}</p>
-          </article>
-        ))}
-      </div>
-      <p class="portfolio-reassurance hand hand--green">Don't worry if your portfolio isn't perfectly organized—I'll guide you through the process!</p>
-    </div>
-  </section>
-
-  <section class="section-lavender">
-    <div class="shell">
-      <div class="section-head center">
-        <h2>Meeting Location</h2>
-        <p class="lead">Evaluations are held in person by appointment in the Bradenton/Sarasota area.</p>
-      </div>
-      <div class="section-head center" style="margin-bottom:32px;">
-        <h2>Why Choose Gifted To Grow?</h2>
-      </div>
-      <div class="feature-card-grid">
-        {reasons.map((reason) => (
-          <article class="svc path-homeschool">
-            <span class="icon" set:html={reason.icon} />
-            <h3>{reason.title}</h3>
-          </article>
-        ))}
-      </div>
-      <div style="margin-top:48px;text-align:center;">
-        <a class="btn btn-primary" href="/contact/?service=Florida%20Homeschool%20Portfolio%20Evaluation#contactForm">Schedule My Evaluation</a>
-      </div>
-    </div>
-  </section>
-
-  <JoinTheGarden />
 </BaseLayout>

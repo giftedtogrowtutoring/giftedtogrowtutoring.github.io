@@ -74,7 +74,7 @@ export const faq: readonly FaqEntry[] = [
     id: "homeschool-portfolio-evaluations",
     question: "Do you offer homeschool portfolio evaluations?",
     answer:
-      "Yes! Gifted To Grow Tutoring offers in-person Florida homeschool portfolio evaluations with a Florida-certified teacher. Evaluations are $50 per student, with discounts available for families with multiple children. Appointments are available by request in the Bradenton/Sarasota area. Select Schedule My Evaluation or use the website's contact form to get started. Appointment requests are not confirmed until Jennifer confirms them.",
+      "Gifted To Grow Tutoring offers in-person Florida homeschool portfolio evaluations with a Florida-certified teacher. Evaluations are held by appointment in the Bradenton/Sarasota area. Pricing is provided on a consultative basis. Select ‘Florida Homeschool Portfolio Evaluation’ on the Homeschool Family Intake Form to request an appointment. Appointment requests are not confirmed until Jennifer confirms them.",
     aliases: [
       "florida homeschool evaluations",
       "homeschool portfolio evaluations",
@@ -89,9 +89,9 @@ export const faq: readonly FaqEntry[] = [
   },
   {
     id: "homeschool-evaluation-cost",
-    question: "How much does an evaluation cost?",
+    question: "How much do your homeschool services cost?",
     answer:
-      "Florida Homeschool Portfolio Evaluations are $50 per student. Discounts are available for families with multiple children.",
+      "Homeschool services are customized to each family, so pricing is provided on a consultative basis. After learning more about your children’s needs and the type of support you are requesting, Gifted To Grow Tutoring will provide personalized recommendations and pricing.",
     aliases: [
       "portfolio evaluation price",
       "homeschool evaluation cost",
@@ -254,14 +254,45 @@ export const faq: readonly FaqEntry[] = [
   },
   {
     id: "homeschool",
-    question: "Do you tutor homeschool families?",
+    question: "Do you work with homeschool families?",
     answer:
-      "Yes. I work alongside homeschool parents to supplement curriculum, fill specific gaps, or take on subjects you'd rather not teach yourself.",
+      "Yes. Gifted To Grow Tutoring provides personalized support for homeschool families, including family consultations, curriculum guidance, scheduling and planning support, academic needs consultations, tutoring, and Florida homeschool portfolio evaluations. Complete the Homeschool Family Intake Form or select the service you are interested in to get started.",
     aliases: [
       "homeschool support",
       "help homeschooling",
-      "homeschool curriculum",
+      "what homeschool services do you offer",
+      "can i ask about more than one service",
+      "can you help multiple children in one family",
     ],
+  },
+
+  {
+    id: "homeschool-curriculum",
+    question: "Can you help me choose curriculum?",
+    answer:
+      "Yes. Gifted To Grow Tutoring can help you review your current curriculum, compare options, identify materials that fit your child’s needs, and make adjustments when your current program is not working well. Complete the Homeschool Family Intake Form and select ‘Curriculum Guidance and Selection.’",
+    aliases: ["homeschool curriculum help", "curriculum guidance", "curriculum consultant", "curriculum selection"],
+  },
+  {
+    id: "homeschool-scheduling",
+    question: "Can you help me create a homeschool schedule?",
+    answer:
+      "Yes. Scheduling support can include daily or weekly routines, subject rotations, planning for multiple children, and creating a realistic homeschool schedule that fits your family. Select ‘Homeschool Scheduling and Planning Support’ on the intake form.",
+    aliases: ["homeschool scheduling help", "weekly homeschool plan", "daily homeschool routine", "planning support"],
+  },
+  {
+    id: "homeschool-academic-needs",
+    question: "Can you help me determine what my child needs academically?",
+    answer:
+      "Yes. Academic needs consultations help parents understand educational strengths, areas for growth, and helpful next steps such as tutoring or supplemental support. This is an educational consultation, not a medical, psychological, diagnostic, special education, or clinical evaluation.",
+    aliases: ["academic needs consultation", "is this diagnostic", "do you diagnose", "special education testing"],
+  },
+  {
+    id: "homeschool-request",
+    question: "How do I request a homeschool consultation?",
+    answer:
+      "Visit the Homeschool Support Services page and choose the service you are interested in, or complete the Homeschool Family Intake Form. You can select more than one service and share information for multiple children in one request.",
+    aliases: ["how do i request a consultation", "homeschool intake form", "request portfolio evaluation", "ask about more than one service"],
   },
   {
     id: "fsa-prep",
