@@ -69,6 +69,74 @@ export const faq: readonly FaqEntry[] = [
       "where do i start",
     ],
   },
+
+  {
+    id: "homeschool-portfolio-evaluations",
+    question: "Do you offer homeschool portfolio evaluations?",
+    answer:
+      "Yes! Gifted To Grow Tutoring offers in-person Florida homeschool portfolio evaluations with a Florida-certified teacher. Evaluations are $50 per student, with discounts available for families with multiple children. Appointments are available by request in the Bradenton/Sarasota area. Select Schedule My Evaluation or use the website's contact form to get started. Appointment requests are not confirmed until Jennifer confirms them.",
+    aliases: [
+      "florida homeschool evaluations",
+      "homeschool portfolio evaluations",
+      "bradenton homeschool evaluations",
+      "sarasota homeschool evaluations",
+      "florida certified teacher evaluations",
+      "homeschool portfolio reviewer",
+      "do you do homeschool evaluations",
+      "annual homeschool evaluation",
+      "portfolio review",
+    ],
+  },
+  {
+    id: "homeschool-evaluation-cost",
+    question: "How much does an evaluation cost?",
+    answer:
+      "Florida Homeschool Portfolio Evaluations are $50 per student. Discounts are available for families with multiple children.",
+    aliases: [
+      "portfolio evaluation price",
+      "homeschool evaluation cost",
+      "how much is a portfolio evaluation",
+      "multiple children discount",
+      "do you offer discounts for multiple children",
+    ],
+  },
+  {
+    id: "homeschool-evaluation-location",
+    question: "Are evaluations in person or where are evaluations held?",
+    answer:
+      "Homeschool portfolio evaluations are held in person by appointment in the Bradenton/Sarasota area.",
+    aliases: [
+      "evaluation meeting format",
+      "where are evaluations held",
+      "where do portfolio evaluations happen",
+      "evaluation appointment location",
+    ],
+  },
+  {
+    id: "homeschool-evaluation-materials",
+    question: "What should I bring?",
+    answer:
+      "Please bring representative samples of your child's work from throughout the year, such as a reading list, writing samples, math work, projects, artwork, science activities, and optional photos of field trips or hands-on learning. Your portfolio does not need to be perfectly organized.",
+    aliases: [
+      "portfolio materials",
+      "does my portfolio need to be perfectly organized",
+      "what do i need for evaluation",
+      "reading list writing samples math work projects artwork science photos",
+    ],
+  },
+  {
+    id: "homeschool-evaluation-after",
+    question: "What happens after the evaluation?",
+    answer:
+      "After a satisfactory evaluation, Jennifer provides a signed evaluation letter for your family to submit to its Florida school district. Gifted To Grow Tutoring cannot provide legal advice or guarantee a satisfactory evaluation.",
+    aliases: [
+      "signed evaluation letter",
+      "district letter",
+      "after portfolio evaluation",
+      "do you guarantee satisfactory evaluation",
+      "legal advice homeschool evaluation",
+    ],
+  },
   {
     id: "subjects",
     question: "What subjects do you tutor?",

@@ -25,6 +25,8 @@ export const business = {
     "writing tutoring",
     "math tutoring",
     "homeschool support",
+    "Florida homeschool portfolio evaluations",
+    "homeschool portfolio evaluations",
     "private tutoring",
     "semi-private tutoring",
     "small-group tutoring",
@@ -42,6 +44,7 @@ export const business = {
 export const navLinks = [
   { href: "/approach/", label: "Philosophy" },
   { href: "/services/", label: "What we do" },
+  { href: "/florida-homeschool-portfolio-evaluations/", label: "Evaluations" },
   { href: "/testimonials/", label: "Stories" },
   { href: "/about/", label: "About Jennifer" },
 ];
