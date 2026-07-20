@@ -1,0 +1,33 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { business } from "../data/business.ts";
+const title = "Homeschool Portfolio Evaluation Intake Form | Gifted To Grow Tutoring";
+const description = "Separate intake form for Florida homeschool families requesting an annual portfolio evaluation.";
+const WEB3FORMS_ACCESS_KEY = "040e27de-957a-4362-9f43-a0dcc796dec9";
+const checklist = ["Reading list", "Writing samples", "Math work", "Science work", "History or social studies", "Projects", "Artwork or music", "Photos of field trips or hands-on activities", "Other work samples"];
+---
+<BaseLayout title={title} description={description}>
+  <section class="section-cream" style="padding-top:64px;"><div class="shell shell-narrow">
+    <div class="eyebrow-row"><span class="dot"></span><span class="eyebrow">Annual Florida homeschool evaluations</span></div>
+    <h1>Homeschool Portfolio Evaluation Intake Form</h1>
+    <p class="lead">This separate form is for families requesting an annual Florida homeschool portfolio evaluation with Jennifer. For general homeschool consulting, curriculum guidance, scheduling support, or academic guidance, use the <a href="/homeschool-support/#homeschool-intake">Homeschool Family Intake Form</a>.</p>
+    <form class="card homeschool-form" action="https://api.web3forms.com/submit" method="POST">
+      <input type="hidden" name="access_key" value={WEB3FORMS_ACCESS_KEY} />
+      <input type="hidden" name="subject" value="Homeschool Portfolio Evaluation Intake" />
+      <input type="hidden" name="form_type" value="Homeschool Portfolio Evaluation Intake Form" />
+      <input type="hidden" name="from_name" value="giftedtogrowtutoring.com" />
+      <input type="hidden" name="redirect" value={`${business.url}/thanks/`} />
+      <input type="checkbox" name="botcheck" tabindex="-1" autocomplete="off" style="display:none;visibility:hidden;" />
+      <h3>Parent or Guardian Information</h3>
+      <div class="field-row"><div class="field"><label for="parentName">Parent/Guardian Name *</label><input id="parentName" name="parent_guardian_name" required autocomplete="name" /></div><div class="field"><label for="email">Email Address *</label><input id="email" name="email" type="email" required autocomplete="email" /></div></div>
+      <div class="field-row"><div class="field"><label for="phone">Phone Number *</label><input id="phone" name="phone" type="tel" required autocomplete="tel" /></div><div class="field"><label for="city">Home City *</label><input id="city" name="home_city" required /></div></div>
+      <h3>Evaluation Details</h3>
+      <div class="field-row"><div class="field"><label for="schoolYear">School Year Being Evaluated *</label><input id="schoolYear" name="school_year_being_evaluated" required /></div><div class="field"><label for="childrenCount">Number of Children Needing Evaluations *</label><input id="childrenCount" name="children_count" type="number" min="1" required /></div></div>
+      <div class="field-row"><div class="field"><label for="preferredDate">Preferred Appointment Date</label><input id="preferredDate" name="preferred_appointment_date" type="date" /></div><div class="field"><label for="preferredTime">Preferred Appointment Time</label><input id="preferredTime" name="preferred_appointment_time" type="time" /></div></div>
+      <div class="field"><label for="firstEvaluation">First Homeschool Evaluation?</label><select id="firstEvaluation" name="first_homeschool_evaluation"><option value="">Choose one</option><option>Yes</option><option>No</option></select></div>
+      <fieldset class="field"><legend>Portfolio checklist (informational)</legend><p class="helper">Not every family must have every item. Bring representative samples that show learning and progress.</p><div class="checkbox-grid">{checklist.map((item) => <label class="checkbox-row"><input type="checkbox" name="portfolio_checklist[]" value={item} /> {item}</label>)}</div></fieldset>
+      <div class="field"><label for="notes">Is there anything you would like Jennifer to know before the evaluation?</label><textarea id="notes" name="portfolio_notes"></textarea></div>
+      <button type="submit" class="btn btn-primary">Submit Portfolio Evaluation Intake</button>
+    </form>
+  </div></section>
+</BaseLayout>

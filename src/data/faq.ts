@@ -71,10 +71,38 @@ export const faq: readonly FaqEntry[] = [
   },
 
   {
+    id: "tutoring-student-intake",
+    question: "Where is the Tutoring Student Intake Form?",
+    answer:
+      "The Tutoring Student Intake Form is for families whose child has already been accepted and placed on Jennifer’s tutoring schedule. If your child is already scheduled, use that form to share detailed information before the first session. If you are still interested in asking about tutoring availability, please contact Jennifer first.",
+    aliases: [
+      "student intake form",
+      "tutoring intake form",
+      "established tutoring student intake",
+      "new tutoring families",
+      "complete student intake",
+      "accepted and scheduled",
+    ],
+  },
+  {
+    id: "established-tutoring-family",
+    question: "My child is already accepted and scheduled. What should I complete?",
+    answer:
+      "Since your child is already accepted and scheduled for tutoring, please complete the Established Tutoring Student Intake Form before the first session. It asks about your child’s strengths, academic needs, learning style, school performance, tutoring goals, and the schedule previously confirmed with Jennifer. Homeschool consulting and portfolio evaluations use separate forms.",
+    aliases: [
+      "already scheduled for tutoring",
+      "already accepted for tutoring",
+      "first tutoring session form",
+      "scheduled with jennifer",
+      "onboarding form",
+    ],
+  },
+
+  {
     id: "homeschool-portfolio-evaluations",
     question: "Do you offer homeschool portfolio evaluations?",
     answer:
-      "Gifted To Grow Tutoring offers in-person Florida homeschool portfolio evaluations with a Florida-certified teacher. Evaluations are held by appointment in the Bradenton/Sarasota area. Pricing is provided on a consultative basis. Select ‘Florida Homeschool Portfolio Evaluation’ on the Homeschool Family Intake Form to request an appointment. Appointment requests are not confirmed until Jennifer confirms them.",
+      "Gifted To Grow Tutoring offers in-person Florida homeschool portfolio evaluations with a Florida-certified teacher. Evaluations are held by appointment in the Bradenton/Sarasota area. Pricing is provided on a consultative basis. Use the separate Homeschool Portfolio Evaluation Intake Form to request an appointment. Appointment requests are not confirmed until Jennifer confirms them.",
     aliases: [
       "florida homeschool evaluations",
       "homeschool portfolio evaluations",
