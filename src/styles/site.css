@@ -950,3 +950,16 @@ i[data-lucide] { stroke-width: 2; }
   .portfolio-feature { padding: 24px; }
   .check-card-grid { grid-template-columns: 1fr; }
 }
+
+/* Established tutoring student intake */
+.intake-notice { margin: 24px 0; padding: 28px; }
+.intake-form { padding: 32px; }
+.intake-form h3 { margin-top: 32px; }
+.intake-form h3:first-of-type { margin-top: 0; }
+.intake-form fieldset { border: 0; padding: 0; }
+.intake-form legend { font-family: var(--font-body); font-weight: 700; font-size: 14px; color: var(--plum); margin-bottom: 8px; padding: 0; }
+.intake-form .helper, .helper { color: var(--ink-soft); font-size: 0.9375rem; line-height: 1.5; margin-top: -4px; }
+.status-check { background: var(--cream-deep); border: 1.5px solid var(--border-soft) !important; border-radius: 16px; padding: 16px !important; }
+.form-status { color: var(--plum); font-weight: 700; margin: 8px 0; }
+.intake-subsection { border-left: 4px solid var(--border-soft); padding: 20px; margin: 28px 0; background: rgba(255, 248, 236, 0.6); border-radius: 16px; }
+.intake-subsection.is-highlighted { border-left-color: var(--orange); background: var(--cream-deep); }

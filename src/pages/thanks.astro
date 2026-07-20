@@ -5,6 +5,7 @@ import Deco from "../components/Deco.astro";
 
 const title = "Note Received | Gifted to Grow Tutoring";
 const description = "Thank you for contacting Gifted to Grow Tutoring. Jennifer will read your note and respond within 48 hours.";
+const isTutoringIntake = Astro.url.searchParams.get("form") === "tutoring-student-intake";
 ---
 <BaseLayout title={title} description={description} noindex>
   <section class="section-cream" style="padding:96px 0;">
@@ -15,13 +16,17 @@ const description = "Thank you for contacting Gifted to Grow Tutoring. Jennifer 
       <Character kind="lemon" size={140} />
       <div class="eyebrow-row" style="justify-content:center;margin-top:24px;">
         <span class="dot"></span>
-        <span class="eyebrow">Got your note</span>
+        <span class="eyebrow">{isTutoringIntake ? "Student intake received" : "Got your note"}</span>
       </div>
-      <h1 class="display" style="margin-top:8px;">Thank you. I have your note.</h1>
-      <p class="lead">
-        I'll read it carefully and write back within 48 hours.
-        If you're in a hurry, you can also reach me at <a href="tel:+19415868421">(941) 586-8421</a>.
-      </p>
+      <h1 class="display" style="margin-top:8px;">{isTutoringIntake ? "Thank you for completing your child’s tutoring intake form." : "Thank you. I have your note."}</h1>
+      {isTutoringIntake ? (
+        <p class="lead">Jennifer will review the information before your child’s first scheduled session.</p>
+      ) : (
+        <p class="lead">
+          I'll read it carefully and write back within 48 hours.
+          If you're in a hurry, you can also reach me at <a href="tel:+19415868421">(941) 586-8421</a>.
+        </p>
+      )}
       <p class="hand hand--green" style="font-size:1.75rem;margin-top:24px;">— Jennifer</p>
       <p style="margin-top:32px;">
         <a class="btn btn-ghost" href="/">Back to the home page</a>
