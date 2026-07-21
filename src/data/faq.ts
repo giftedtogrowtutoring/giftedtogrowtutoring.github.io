@@ -74,7 +74,7 @@ export const faq: readonly FaqEntry[] = [
     id: "tutoring-student-intake",
     question: "Where is the New Tutoring Student Welcome & Partnership Form?",
     answer:
-      "The New Tutoring Student Welcome & Partnership Form is only for students who have already been accepted and scheduled for tutoring. It takes about 10 minutes and asks about the child’s strengths, needs, goals, interests, learning preferences, and anything the parent wants Jennifer to know. It also includes the Tutoring Partnership Agreement and rolling 90-day cancellation policy. New tutoring leads should contact Jennifer before completing this form; homeschool consulting and portfolio evaluations use separate forms.",
+      "Current or Accepted Tutoring Students is the section for families whose child has already been accepted and placed on Jennifer’s tutoring schedule. Parents can complete the New Student Welcome & Partnership Form there before the child’s first session. The form takes about 10 minutes, is not under What We Do, and is separate from homeschool consulting and portfolio evaluation forms. New tutoring leads should contact Jennifer first.",
     aliases: [
       "student intake form",
       "tutoring intake form",
@@ -89,7 +89,7 @@ export const faq: readonly FaqEntry[] = [
     id: "established-tutoring-family",
     question: "My child is already accepted and scheduled. What should I complete?",
     answer:
-      "Since your child has already been accepted and scheduled, please complete the New Tutoring Student Welcome & Partnership Form before the first session. It takes about 10 minutes and gives you an opportunity to share your child’s strengths, needs, goals, interests, learning style, and anything else you would like Jennifer to know.",
+      "Since your child has already been accepted and scheduled, please visit Current or Accepted Tutoring Students and complete the New Student Welcome & Partnership Form before the first session. It takes about 10 minutes and gives you an opportunity to share your child’s strengths, needs, goals, interests, learning style, and anything else you would like Jennifer to know.",
     aliases: [
       "already scheduled for tutoring",
       "already accepted for tutoring",
@@ -102,7 +102,7 @@ export const faq: readonly FaqEntry[] = [
     id: "new-tutoring-lead-routing",
     question: "Should I complete the tutoring intake form if I am asking about availability?",
     answer:
-      "The tutoring intake and partnership form is only for students who have already been accepted and scheduled. If you are still asking about tutoring availability, please contact Jennifer first.",
+      "The Current or Accepted Tutoring Students form is only for students who have already been accepted and scheduled. If you are still asking about tutoring availability, please contact Jennifer first through the general contact form.",
     aliases: [
       "asking about tutoring availability",
       "new tutoring lead",
@@ -122,7 +122,7 @@ export const faq: readonly FaqEntry[] = [
     id: "cancellation-policy",
     question: "What is the cancellation policy?",
     answer:
-      "Families may cancel without a fee when they provide more than 24 hours’ notice and contact Jennifer directly. Cancellations or rescheduling requests made within 24 hours are charged at 50%. If three cancellations or rescheduling requests occur within any rolling 90-day period, the third occurrence is charged at 100%. Illnesses and family emergencies may be discussed directly with Jennifer and reviewed individually.",
+      "Families may cancel without a fee when they provide more than 24 hours’ notice and contact Jennifer directly. Cancellations or rescheduling requests made with less than 24 hours’ notice are charged at 50%. If three cancellations or rescheduling requests occur within any rolling 90-day period, the third occurrence is charged at 100%, and no-shows are charged at 100%. Illnesses, family emergencies, and specific circumstances should be discussed directly with Jennifer; the website and chatbot do not calculate or waive charges.",
     aliases: ["cancel session", "reschedule", "rolling 90 day", "no show", "cancellation fee"],
   },
   {
@@ -131,6 +131,21 @@ export const faq: readonly FaqEntry[] = [
     answer:
       "Jennifer will need to review the specific circumstances with you directly. Please contact her as soon as possible so you can discuss the situation together.",
     aliases: ["will i be charged", "waive fee", "emergency exception", "calculate cancellations", "do i owe"],
+  },
+
+  {
+    id: "jennifer-revised-commitment",
+    question: "What happens if Jennifer needs to cancel or reschedule?",
+    answer:
+      "Jennifer will make every effort to provide more than 24 hours’ notice if she needs to reschedule. In that situation, she and the family will work together to find another time, and no automatic discount applies. If Jennifer must cancel with less than 24 hours’ notice because of illness, a family emergency, or another unavoidable circumstance, the family’s next scheduled session receives a 50% discount. Major weather events, widespread outages, government closures, natural disasters, and similar circumstances beyond either party’s control are handled directly on a case-by-case basis. The chatbot cannot decide whether a specific incident qualifies; please contact Jennifer directly.",
+    aliases: ["jennifer cancels", "does jennifer discount", "weather cancellation", "hurricane closure", "jennifer reschedule"],
+  },
+  {
+    id: "executive-organization-support",
+    question: "Do you help with executive functioning or organization?",
+    answer:
+      "Yes. Gifted To Grow Tutoring may provide educational coaching and academic support for planning, organizing school materials, time management, task initiation, task completion, following multi-step directions, study habits, and independent learning routines. These services are educational support, not therapy, clinical treatment, medical treatment, psychological treatment, occupational therapy, or diagnostic services.",
+    aliases: ["executive functioning", "organizational skills", "time management", "study habits", "task initiation", "school materials"],
   },
 
   {
@@ -204,7 +219,7 @@ export const faq: readonly FaqEntry[] = [
     id: "subjects",
     question: "What subjects do you tutor?",
     answer:
-      "Reading, writing, math, test readiness, executive function skills, and homeschool support. I'm Reading Endorsed and ESOL Endorsed, so I'm well-prepared for kids who need extra support with language and literacy.",
+      "Reading, writing, math, Homework Help, FAST Testing Practice, General Academic Support, executive functioning skills, organizational skills, and homeschool support. Florida State Testing Practice is no longer listed as a separate intake option. Executive functioning and organizational support are educational coaching and academic support for planning, organizing school materials, time management, task initiation and completion, multi-step directions, study habits, and independent learning routines.",
     aliases: [
       "what do you teach",
       "which subjects",

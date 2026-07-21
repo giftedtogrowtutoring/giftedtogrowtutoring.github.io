@@ -45,6 +45,7 @@ export const navLinks = [
   { href: "/approach/", label: "Philosophy" },
   { href: "/services/", label: "What we do" },
   { href: "/homeschool-support/", label: "Homeschool Support" },
+  { href: "/current-or-accepted-tutoring-students/", label: "Current or Accepted Tutoring Students" },
   { href: "/testimonials/", label: "Stories" },
   { href: "/about/", label: "About Jennifer" },
 ];
