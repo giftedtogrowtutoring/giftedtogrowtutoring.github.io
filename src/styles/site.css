@@ -995,3 +995,61 @@ i[data-lucide] { stroke-width: 2; }
   .form-card { padding: 18px; }
   .intake-notice, .intake-form { padding: 20px; }
 }
+
+/* Current or Accepted Tutoring Students refinements */
+.form-title {
+  color: var(--plum);
+  font-size: clamp(1.75rem, 3vw, 2.35rem);
+  margin: 28px 0 12px;
+  text-align: center;
+}
+.intake-form .checkbox-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, max-content));
+  column-gap: 18px;
+  row-gap: 10px;
+  align-items: start;
+  justify-content: start;
+}
+.intake-form .checkbox-row,
+.intake-form .radio-row {
+  display: inline-flex;
+  align-items: flex-start;
+  gap: 8px;
+  max-width: 100%;
+  min-width: 0;
+  line-height: 1.35;
+}
+.intake-form .checkbox-row input,
+.intake-form .radio-row input {
+  flex: 0 0 auto;
+  margin-top: 3px;
+}
+.intake-form .radio-field {
+  margin-bottom: 18px;
+}
+.intake-form .radio-options {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 10px 28px;
+  max-width: 100%;
+}
+.policy-section p,
+.agreement-card p {
+  max-width: 68ch;
+}
+@media (min-width: 1100px) {
+  .nav-inner { max-width: 1240px; }
+  .nav-links { gap: 16px; font-size: 14px; }
+  .nav-links .btn { padding-left: 14px !important; padding-right: 14px !important; }
+}
+@media (max-width: 640px) {
+  .intake-form .checkbox-grid {
+    grid-template-columns: 1fr;
+  }
+  .intake-form .radio-options {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
