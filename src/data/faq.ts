@@ -74,7 +74,7 @@ export const faq: readonly FaqEntry[] = [
     id: "tutoring-student-intake",
     question: "Where is the New Tutoring Student Welcome & Partnership Form?",
     answer:
-      "Current or Accepted Tutoring Students is the section for families whose child has already been accepted and placed on Jennifer’s tutoring schedule. Parents can complete the New Student Welcome & Partnership Form there before the child’s first session. The form takes about 10 minutes, is not under What We Do, and is separate from homeschool consulting and portfolio evaluation forms. New tutoring leads should contact Jennifer first.",
+      "Current or Accepted Tutoring Students is the section for families whose child has already been accepted and placed on Jennifer’s tutoring schedule. Parents can complete the New Student Welcome & Partnership Form there before the child’s first session. The form takes about 10 minutes and includes a place to describe how the child is uniquely gifted through talents, interests, creativity, personality strengths, leadership, perseverance, curiosity, kindness, problem-solving, or other qualities that help Jennifer understand the whole child. It is not under What We Do and is separate from homeschool consulting and portfolio evaluation forms. New tutoring leads should contact Jennifer first.",
     aliases: [
       "student intake form",
       "tutoring intake form",
@@ -87,9 +87,10 @@ export const faq: readonly FaqEntry[] = [
   },
   {
     id: "established-tutoring-family",
-    question: "My child is already accepted and scheduled. What should I complete?",
+    question:
+      "My child is already accepted and scheduled. What should I complete?",
     answer:
-      "Since your child has already been accepted and scheduled, please visit Current or Accepted Tutoring Students and complete the New Student Welcome & Partnership Form before the first session. It takes about 10 minutes and gives you an opportunity to share your child’s strengths, needs, goals, interests, learning style, and anything else you would like Jennifer to know.",
+      "Since your child has already been accepted and scheduled, please visit Current or Accepted Tutoring Students and complete the New Student Welcome & Partnership Form before the first session. It takes about 10 minutes and gives you an opportunity to share your child’s academic strengths, unique gifts, needs, goals, interests, learning style, and anything else you would like Jennifer to know. The form asks how your child is uniquely gifted so Jennifer can get to know the whole child, build trust and connection, tailor tutoring to the child’s interests, encourage confidence, incorporate strengths into instruction, and meet the child where they are.",
     aliases: [
       "already scheduled for tutoring",
       "already accepted for tutoring",
@@ -98,9 +99,26 @@ export const faq: readonly FaqEntry[] = [
       "onboarding form",
     ],
   },
+
+  {
+    id: "child-unique-gifts-intake",
+    question:
+      "Does the New Student Welcome & Partnership Form ask about my child’s unique gifts?",
+    answer:
+      "The New Student Welcome & Partnership Form gives parents a place to describe how their child is uniquely gifted. You may share talents, interests, creativity, personality strengths, leadership, perseverance, curiosity, kindness, problem-solving, or anything else that helps Jennifer understand and connect with your child. Gifted is used broadly here, not only as an academic label or formal gifted-education designation; Jennifer uses this information to get to know the whole child, build trust, tailor tutoring to interests, encourage confidence, incorporate strengths into instruction, and meet the child where they are.",
+    aliases: [
+      "unique gifts",
+      "child gifted question",
+      "talents and interests on intake",
+      "does gifted mean academically gifted",
+      "personality strengths",
+      "whole child tutoring",
+    ],
+  },
   {
     id: "new-tutoring-lead-routing",
-    question: "Should I complete the tutoring intake form if I am asking about availability?",
+    question:
+      "Should I complete the tutoring intake form if I am asking about availability?",
     answer:
       "The Current or Accepted Tutoring Students form is only for students who have already been accepted and scheduled. If you are still asking about tutoring availability, please contact Jennifer first through the general contact form.",
     aliases: [
@@ -135,21 +153,38 @@ export const faq: readonly FaqEntry[] = [
     question: "What is the tutoring partnership agreement?",
     answer:
       "Gifted To Grow Tutoring approaches tutoring as a partnership among Jennifer, the parent or guardian, the student, and, when appropriate, the classroom teacher. Instruction is tailored to the child’s individual strengths, needs, gifts, abilities, and learning style.",
-    aliases: ["partnership agreement", "tutoring agreement", "parent agreement", "educational team"],
+    aliases: [
+      "partnership agreement",
+      "tutoring agreement",
+      "parent agreement",
+      "educational team",
+    ],
   },
   {
     id: "cancellation-policy",
     question: "What is the cancellation policy?",
     answer:
       "Families may cancel without a fee when they provide more than 24 hours’ notice and contact Jennifer directly. Cancellations or rescheduling requests made with less than 24 hours’ notice are charged at 50%. If three cancellations or rescheduling requests occur within any rolling 90-day period, the third occurrence is charged at 100%, and no-shows are charged at 100%. Illnesses, family emergencies, and specific circumstances should be discussed directly with Jennifer; the website and chatbot do not calculate or waive charges.",
-    aliases: ["cancel session", "reschedule", "rolling 90 day", "no show", "cancellation fee"],
+    aliases: [
+      "cancel session",
+      "reschedule",
+      "rolling 90 day",
+      "no show",
+      "cancellation fee",
+    ],
   },
   {
     id: "specific-cancellation-fee-review",
     question: "Will I be charged a cancellation fee for my situation?",
     answer:
       "Jennifer will need to review the specific circumstances with you directly. Please contact her as soon as possible so you can discuss the situation together.",
-    aliases: ["will i be charged", "waive fee", "emergency exception", "calculate cancellations", "do i owe"],
+    aliases: [
+      "will i be charged",
+      "waive fee",
+      "emergency exception",
+      "calculate cancellations",
+      "do i owe",
+    ],
   },
 
   {
@@ -157,14 +192,27 @@ export const faq: readonly FaqEntry[] = [
     question: "What happens if Jennifer needs to cancel or reschedule?",
     answer:
       "Jennifer will make every effort to provide more than 24 hours’ notice if she needs to reschedule. In that situation, she and the family will work together to find another time, and no automatic discount applies. If Jennifer must cancel with less than 24 hours’ notice because of illness, a family emergency, or another unavoidable circumstance, the family’s next scheduled session receives a 50% discount. Major weather events, widespread outages, government closures, natural disasters, and similar circumstances beyond either party’s control are handled directly on a case-by-case basis. The chatbot cannot decide whether a specific incident qualifies; please contact Jennifer directly.",
-    aliases: ["jennifer cancels", "does jennifer discount", "weather cancellation", "hurricane closure", "jennifer reschedule"],
+    aliases: [
+      "jennifer cancels",
+      "does jennifer discount",
+      "weather cancellation",
+      "hurricane closure",
+      "jennifer reschedule",
+    ],
   },
   {
     id: "executive-organization-support",
     question: "Do you help with executive functioning or organization?",
     answer:
       "Yes. Gifted To Grow Tutoring may provide educational coaching and academic support for planning, organizing school materials, time management, task initiation, task completion, following multi-step directions, study habits, and independent learning routines. These services are educational support, not therapy, clinical treatment, medical treatment, psychological treatment, occupational therapy, or diagnostic services.",
-    aliases: ["executive functioning", "organizational skills", "time management", "study habits", "task initiation", "school materials"],
+    aliases: [
+      "executive functioning",
+      "organizational skills",
+      "time management",
+      "study habits",
+      "task initiation",
+      "school materials",
+    ],
   },
 
   {
@@ -239,11 +287,7 @@ export const faq: readonly FaqEntry[] = [
     question: "What subjects do you tutor?",
     answer:
       "Reading, writing, math, Homework Help, FAST Testing Practice, General Academic Support, executive functioning skills, organizational skills, and homeschool support. Florida State Testing Practice is no longer listed as a separate intake option. Executive functioning and organizational support are educational coaching and academic support for planning, organizing school materials, time management, task initiation and completion, multi-step directions, study habits, and independent learning routines.",
-    aliases: [
-      "what do you teach",
-      "which subjects",
-      "what areas do you cover",
-    ],
+    aliases: ["what do you teach", "which subjects", "what areas do you cover"],
   },
   {
     id: "session-length",
@@ -273,23 +317,14 @@ export const faq: readonly FaqEntry[] = [
     question: "Do you work with kids who have IEPs or 504 plans?",
     answer:
       "Yes — and I'm grateful when families share those with me. Knowing how your child learns best helps me teach them better from day one.",
-    aliases: [
-      "iep",
-      "504 plan",
-      "special education",
-      "learning differences",
-    ],
+    aliases: ["iep", "504 plan", "special education", "learning differences"],
   },
   {
     id: "teaching-style",
     question: "What's your teaching style?",
     answer:
       "Gentle, patient, and built around your specific child. I keep my caseload small on purpose so I can really know each of your children. No worksheets pulled from a binder — every session is built around them.",
-    aliases: [
-      "how do you teach",
-      "your approach",
-      "what method do you use",
-    ],
+    aliases: ["how do you teach", "your approach", "what method do you use"],
   },
   {
     id: "free-consult",
@@ -330,12 +365,8 @@ export const faq: readonly FaqEntry[] = [
     id: "math-help",
     question: "Can you help with math?",
     answer:
-      "Yes. I teach the sense behind the steps, not just procedures — we use manipulatives, paper, and real-life problems so your child understands the \"why.\"",
-    aliases: [
-      "math tutor",
-      "help with math",
-      "struggling with math",
-    ],
+      'Yes. I teach the sense behind the steps, not just procedures — we use manipulatives, paper, and real-life problems so your child understands the "why."',
+    aliases: ["math tutor", "help with math", "struggling with math"],
   },
   {
     id: "faith",
@@ -368,28 +399,48 @@ export const faq: readonly FaqEntry[] = [
     question: "Can you help me choose curriculum?",
     answer:
       "Yes. Gifted To Grow Tutoring can help you review your current curriculum, compare options, identify materials that fit your child’s needs, and make adjustments when your current program is not working well. Complete the Homeschool Family Intake Form and select ‘Curriculum Guidance and Selection.’",
-    aliases: ["homeschool curriculum help", "curriculum guidance", "curriculum consultant", "curriculum selection"],
+    aliases: [
+      "homeschool curriculum help",
+      "curriculum guidance",
+      "curriculum consultant",
+      "curriculum selection",
+    ],
   },
   {
     id: "homeschool-scheduling",
     question: "Can you help me create a homeschool schedule?",
     answer:
       "Yes. Scheduling support can include daily or weekly routines, subject rotations, planning for multiple children, and creating a realistic homeschool schedule that fits your family. Select ‘Homeschool Scheduling and Planning Support’ on the intake form.",
-    aliases: ["homeschool scheduling help", "weekly homeschool plan", "daily homeschool routine", "planning support"],
+    aliases: [
+      "homeschool scheduling help",
+      "weekly homeschool plan",
+      "daily homeschool routine",
+      "planning support",
+    ],
   },
   {
     id: "homeschool-academic-needs",
     question: "Can you help me determine what my child needs academically?",
     answer:
       "Yes. Academic needs consultations help parents understand educational strengths, areas for growth, and helpful next steps such as tutoring or supplemental support. This is an educational consultation, not a medical, psychological, diagnostic, special education, or clinical evaluation.",
-    aliases: ["academic needs consultation", "is this diagnostic", "do you diagnose", "special education testing"],
+    aliases: [
+      "academic needs consultation",
+      "is this diagnostic",
+      "do you diagnose",
+      "special education testing",
+    ],
   },
   {
     id: "homeschool-request",
     question: "How do I request a homeschool consultation?",
     answer:
       "Visit the Homeschool Support Services page and choose the service you are interested in, or complete the Homeschool Family Intake Form. You can select more than one service and share information for multiple children in one request.",
-    aliases: ["how do i request a consultation", "homeschool intake form", "request portfolio evaluation", "ask about more than one service"],
+    aliases: [
+      "how do i request a consultation",
+      "homeschool intake form",
+      "request portfolio evaluation",
+      "ask about more than one service",
+    ],
   },
   {
     id: "fsa-prep",
@@ -467,8 +518,7 @@ export const faq: readonly FaqEntry[] = [
   {
     id: "phone",
     question: "Can I just call instead of filling out the form?",
-    answer:
-      "Of course. Jennifer's direct line is (941) 586-8421.",
+    answer: "Of course. Jennifer's direct line is (941) 586-8421.",
     aliases: [
       "phone number",
       "can i call",
