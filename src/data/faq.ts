@@ -111,6 +111,25 @@ export const faq: readonly FaqEntry[] = [
       "availability request",
     ],
   },
+
+  {
+    id: "intake-school-support-plans",
+    question: "Does the intake form ask about IEPs, 504 Plans, or MTSS/RTI?",
+    answer:
+      "The New Student Welcome & Partnership Form includes an optional section about IEPs, Section 504 Plans, and MTSS or RTI support. Parents may briefly summarize their child’s goals, accommodations, intervention area, and current focus so Jennifer can better tailor tutoring. Private records do not need to be uploaded. Gifted To Grow Tutoring does not diagnose students or replace school-based or clinical services.",
+    aliases: [
+      "IEP on intake form",
+      "504 plan intake",
+      "MTSS RTI support",
+      "school based support",
+      "teacher recommendations",
+      "educational plans",
+      "do I upload IEP",
+      "private plans medical documents",
+      "intervention goals",
+    ],
+  },
+
   {
     id: "tutoring-partnership-agreement",
     question: "What is the tutoring partnership agreement?",
