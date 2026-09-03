@@ -44,7 +44,7 @@ export const testimonials: Testimonial[] = [
   {
     body:
       "We started tutoring with Ms. Pollard when my son was in kindergarten, and he is now in first grade. Over that time, we have seen tremendous growth in both his math and reading skills. His FAST test scores have improved significantly, and even more importantly, his confidence as a learner continues to grow.\n\nMs. Pollard has a wonderful balance of professionalism, organization, and genuine kindness. She creates lessons that are engaging and fun while keeping students focused and helping them make meaningful progress. Her friendly, understanding approach makes my son feel comfortable asking questions and taking on new challenges without fear of making mistakes.\n\nWhat stands out most is her passion for helping children succeed. She genuinely cares about her students and celebrates their accomplishments along the way. We are incredibly grateful for the positive impact she has had on our son’s academic growth and confidence. I highly recommend her to any family looking for a knowledgeable, patient, and dedicated tutor.",
-    sig: "Kelly Drew, Mom — Bradenton, FL",
-    meta: "",
+    sig: "— Kelly Drew",
+    meta: "Mother of a 1st Grader",
   },
 ];
