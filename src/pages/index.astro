@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import Hero from "../components/Hero.astro";
+import AnnouncementBanner from "../components/AnnouncementBanner.astro";
 import PlantTheSeed from "../components/PlantTheSeed.astro";
 import TendTheRoots from "../components/TendTheRoots.astro";
 import AboutTeaser from "../components/AboutTeaser.astro";
@@ -12,6 +13,7 @@ const title = "Gifted to Grow Tutoring | K–6 Tutoring in Sarasota & Bradenton"
 const description = "Personalized K–6 reading, writing, math, and homeschool tutoring in Sarasota and Bradenton, Florida. Patient one-on-one and small-group support from an experienced educator.";
 ---
 <BaseLayout title={title} description={description}>
+  <AnnouncementBanner />
   <Hero />
   <PlantTheSeed />
   <TendTheRoots />
