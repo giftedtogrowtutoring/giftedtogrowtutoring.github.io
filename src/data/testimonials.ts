@@ -47,4 +47,10 @@ export const testimonials: Testimonial[] = [
     sig: "— Kelly Drew",
     meta: "Mother of a 1st Grader",
   },
+  {
+    body:
+      "I’m a seventh-grade student in FLVS Flex, and I’ve been working with Ms. Pollard since the beginning of the school year. She has helped me improve so much. She’s patient and explains things in ways that make sense to me. When I’m working on equations or a challenging lesson, she shows me different ways to solve problems and helps me find what works best for me. I would totally recommend Ms. Pollard!",
+    sig: "— Anonymous student",
+    meta: "Seventh-grade FLVS Flex student",
+  },
 ];
