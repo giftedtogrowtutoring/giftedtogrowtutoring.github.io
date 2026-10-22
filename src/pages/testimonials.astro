@@ -1,5 +1,6 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import TestimonialText from "../components/TestimonialText.astro";
 import Deco from "../components/Deco.astro";
 import JoinTheGarden from "../components/JoinTheGarden.astro";
 import { testimonials } from "../data/testimonials.ts";
@@ -30,7 +31,7 @@ const description = "Read parent testimonials about Jennifer’s warm K–6 tuto
         {testimonials.map((q) => (
           <article class="quote">
             <span class="mark" aria-hidden="true">&ldquo;</span>
-            <p class="body">{q.full ?? q.body}</p>
+            <TestimonialText text={q.full ?? q.body} author={q.sig} />
             <div>
               <div class="sig">{q.sig}</div>
               <div class="meta">{q.meta}</div>
