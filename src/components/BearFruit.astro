@@ -1,4 +1,5 @@
 ---
+import TestimonialText from "./TestimonialText.astro";
 import Deco from "./Deco.astro";
 import { testimonials } from "../data/testimonials.ts";
 ---
@@ -22,7 +23,7 @@ import { testimonials } from "../data/testimonials.ts";
       {testimonials.map((q) => (
         <article class="quote">
           <span class="mark" aria-hidden="true">&ldquo;</span>
-          <p class="body">{q.body}</p>
+          <TestimonialText text={q.full ?? q.body} author={q.sig} />
           <div>
             <div class="sig">{q.sig}</div>
             <div class="meta">{q.meta}</div>
