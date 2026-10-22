@@ -1,0 +1,67 @@
+---
+interface Props {
+  text: string;
+  author: string;
+}
+const { text, author } = Astro.props;
+---
+<div class="testimonial-content">
+  <p class="body testimonial-text">{text}</p>
+  <button class="testimonial-toggle" type="button" aria-expanded="false" aria-label={`Read more of the testimonial from ${author}`} hidden>Read more</button>
+</div>
+<style>
+  .quote .body.testimonial-text { padding-top: 0; margin-top: 22px; }
+  .testimonial-text.is-collapsed {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 6;
+    overflow: hidden;
+  }
+  .testimonial-toggle {
+    margin-top: 14px;
+    min-height: 44px;
+    padding: 8px 16px;
+    border: 2px solid var(--plum);
+    border-radius: 999px;
+    background: var(--cream);
+    color: var(--plum);
+    font: inherit;
+    font-weight: 700;
+    cursor: pointer;
+  }
+  .testimonial-toggle:hover { background: var(--lemon); }
+  .testimonial-toggle:focus-visible { outline: 3px solid var(--lemon); outline-offset: 3px; }
+  .testimonial-toggle[hidden] { display: none; }
+  @media (max-width: 640px) {
+    .quote .body.testimonial-text { margin-top: 14px; }
+  }
+  @media print {
+    .testimonial-text.is-collapsed { display: block; overflow: visible; }
+    .testimonial-toggle { display: none; }
+  }
+</style>
+<script>
+  document.querySelectorAll<HTMLElement>(".testimonial-content").forEach((container, index) => {
+    const text = container.querySelector<HTMLElement>(".testimonial-text");
+    const button = container.querySelector<HTMLButtonElement>(".testimonial-toggle");
+    if (!text || !button) return;
+    text.id = `testimonial-text-${index}`;
+    button.setAttribute("aria-controls", text.id);
+    const readMoreLabel = button.getAttribute("aria-label") ?? "Read more";
+    let expanded = false;
+    const update = () => {
+      text.classList.add("is-collapsed");
+      const truncated = text.scrollHeight > text.clientHeight + 1;
+      text.classList.toggle("is-collapsed", truncated && !expanded);
+      button.hidden = !truncated;
+      button.textContent = expanded ? "Show less" : "Read more";
+      button.setAttribute("aria-expanded", String(expanded));
+      button.setAttribute("aria-label", expanded ? readMoreLabel.replace("Read more", "Show less") : readMoreLabel);
+    };
+    button.addEventListener("click", () => { expanded = !expanded; update(); });
+    const observer = new ResizeObserver(update);
+    observer.observe(container);
+    document.fonts.ready.then(update);
+    update();
+  });
+</script>
